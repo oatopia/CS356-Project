@@ -5,14 +5,14 @@
 
 body {
   margin: 0px;
-  background-color:#ffdbc7;
+  background-color: #fed6d7;
   padding-bottom: 20px;
 }
 
 form {
   margin-top: 20px;
   border: 3px solid #f1f1f1;
-  color: #744510;
+  color: #055a6d;
 }
 
 .container {
@@ -31,16 +31,16 @@ input[type="password"] {
   box-sizing: border-box;
   font-size: 18px;
   outline: none;
-  color: #d6801e;
+  color: #0883a0;
 }
 input[type="text"]::placeholder,
 input[type="password"]::placeholder{
-  color: #d6801e;
+  color: #0883a0;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus{
-  border-color: #744510;
+  border-color: #055a6d;
 }
 
 input[type="submit"] {
@@ -122,8 +122,7 @@ span.psw {
 }
 
 .Navbar-homepage{
-  background-color: #ffcbb1;
-  /* background-color:#ffdbc7; */
+  background-color: #fff9f9;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,7 +142,6 @@ span.psw {
   display: flex;
   width: 45%;
   justify-content: space-between;
-  /* background-color: brown; */
 }
 
 .manu-navbar li{
@@ -151,15 +149,15 @@ span.psw {
   cursor: pointer;
 }
 
-.manu-navbar a{
+.manu-navbar a {
   font-weight: 500;
   font-size: 24px;
-  color: #d6801e;
+  color: #0883a0;
   text-decoration: none;
 }
 
-.manu-navbar a:hover{
-  color: #744510;
+.manu-navbar a:hover {
+  color: #055a6d;
   transition-duration: 0.3s;
 }
 
@@ -168,8 +166,7 @@ span.psw {
   white-space: nowrap;
   font-weight: 500;
   font-size: 24px;
-  color: #744510;
-  /* color: #829568; */
+  color: #055a6d;
   cursor: pointer;
   text-decoration: none;
 }
@@ -177,7 +174,7 @@ span.psw {
 .line-vertical{
   height: 40px;
   width: 2px;
-  background-color: #bdb3a8;
+  background-color:#7c848c;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -185,8 +182,10 @@ span.psw {
 .menu-login-cart{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .cart-icon{
   height: 36px;
+  cursor: pointer;
 }

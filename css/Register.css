@@ -5,14 +5,14 @@
 
 body {
   margin: 0px;
-  background-color:#ffdbc7;
+  background-color: #fed6d7;
   padding-bottom: 20px;
 }
 
 form {
   margin-top: 40px;
   border: 3px solid #f1f1f1;
-  color: #744510;
+  color: #055a6d;
 }
 
 
@@ -34,17 +34,17 @@ input[type="password"] {
   color: black;
   outline: none;
   font-size: 18px;
-  color: #d6801e;
+  color: #0883a0;
 }
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-  color: #d6801e;
+  color: #0883a0;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus{
-  border-color: #744510;
+  border-color: #055a6d;
 }
 
 input[type="submit"] {
@@ -89,7 +89,7 @@ input[name="cancel"] {
 }
 
 .Navbar-homepage{
-  background-color: #ffcbb1;
+  background-color: #fff9f9;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,14 +113,18 @@ input[name="cancel"] {
 
 .manu-navbar li{
   list-style: none;
-  font-weight: 500;
-  font-size: 24px;
-  color: #d6801e;
   cursor: pointer;
 }
 
-.manu-navbar li:hover{
-  color: #744510;
+.manu-navbar a {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  text-decoration: none;
+}
+
+.manu-navbar a:hover {
+  color: #055a6d;
   transition-duration: 0.3s;
 }
 
@@ -128,15 +132,19 @@ input[name="cancel"] {
   white-space: nowrap;
   font-weight: 500;
   font-size: 24px;
-  color: #744510;
+  color: #0883a0;
   cursor: pointer;
   text-decoration: none;
+}
+
+.login-link:hover{
+  color: #055a6d;
 }
 
 .line-vertical{
   height: 40px;
   width: 2px;
-  background-color: #bdb3a8;
+  background-color:#7c848c;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -148,4 +156,5 @@ input[name="cancel"] {
 
 .cart-icon{
   height: 36px;
+  cursor: pointer;
 }

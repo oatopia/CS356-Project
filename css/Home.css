@@ -5,7 +5,6 @@
 
 body {
   margin: 0px;
-  /* background-color: #fff9f9; */
   background-color: #fed6d7;
   padding-bottom: 0px;
 }
@@ -15,9 +14,7 @@ body {
 }
 
 .Navbar-homepage {
-  /* background-color: #fed6d7; */
   background-color: #fff9f9;
-  /* background-color:#ffdbc7; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +34,6 @@ body {
   display: flex;
   width: 45%;
   justify-content: space-between;
-  /* background-color: brown; */
 }
 
 .manu-navbar li {
@@ -67,7 +63,6 @@ body {
   font-weight: 500;
   font-size: 24px;
   color: #0883a0;
-  /* color: #829568; */
   cursor: pointer;
 }
 
@@ -79,7 +74,7 @@ body {
 .line-vertical {
   height: 40px;
   width: 2px;
-  background-color: #bdb3a8;
+  background-color:#7c848c;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -91,19 +86,14 @@ body {
 
 .cart-icon {
   height: 36px;
+  cursor: pointer;
 }
 
 .slide-image {
-  /* margin-top: 20px; */
-  /* width: 80%; */
-  /* height: 200px; */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* .slide-image img{
-  height: 100%;
-} */
 
 .collection-image {
   margin-top: 5%;
@@ -128,7 +118,7 @@ body {
   height: 100%;
   width: 100%;
   transition-duration: 1s;
-  opacity: 0.6;
+  opacity: 0.9;
   z-index: -1;
 }
 
@@ -155,7 +145,7 @@ body {
 }
 
 .Best-seller h1 {
-  font-size: 24px;
+  font-size: 26px;
   color: #01406b;
 }
 
@@ -177,7 +167,7 @@ body {
   height: 100%;
   width: 100%;
   transition-duration: 1s;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .best-seller-contain-inner:hover img {
@@ -214,11 +204,40 @@ body {
   border: none;
   font-size: 18px;
   padding: 10px 20px 10px 20px ;
+  transition-duration: 0.5s;
+  cursor: pointer;
   /* top left bottom right */
 }
 
-footer {
+.btn-choose:hover{
+  background-color: #177a98;
+  transition-duration: 0.5s;
+}
+
+.btn-all-item-contain{
   margin-top: 5%;
+  text-align: center;
+}
+
+.btn-all-item{
+  
+  border-radius: 20px;
+  color: white;
+  border: none;
+  font-size: 24px;
+  background-color: #1c98bc;
+  padding: 10px 20px 10px 20px ;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.btn-all-item:hover{
+  background-color: #177a98;
+  transition-duration: 0.5s;
+}
+
+footer {
+  margin-top: 3%;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ffb1af;
