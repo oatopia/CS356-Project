@@ -5,11 +5,13 @@
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
-  background-image: url("../image/ln2.jpg");
+  /* background-image: url("../image/ln2.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   margin: 0px;
+  /* background-color: #ffcbb1; */
+  background-color:#ffdbc7;
 }
 
 form {
@@ -131,7 +133,8 @@ span.psw {
 }
 
 .Navbar-homepage{
-  background-color:#ffdbc7;
+  background-color: #ffcbb1;
+  /* background-color:#ffdbc7; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,10 +148,12 @@ span.psw {
 }
 
 .manu-navbar{
+  padding-left: 10px;
   align-items: center;
   display: flex;
-  width: 40%;
-  justify-content: space-evenly;
+  width: 45%;
+  justify-content: space-between;
+  /* background-color: brown; */
 }
 
 .manu-navbar li{
@@ -156,6 +161,7 @@ span.psw {
   font-weight: 500;
   font-size: 24px;
   color: #d6801e;
+  /* color: #6c8460; */
   cursor: pointer;
 }
 
@@ -165,10 +171,12 @@ span.psw {
 }
 
 .login-link{
+  text-decoration: none;
   white-space: nowrap;
   font-weight: 500;
   font-size: 24px;
   color: #744510;
+  /* color: #829568; */
   cursor: pointer;
 }
 
