@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/Login.css">
+
+</head>
+
+<body>
+    <div class="form">
+        <div class="container">
+            <div class="form-con">
+                <form action="service/login.php" method="post" name="login">
+                    <div class="contextcon">
+                        <h1>เข้าสู่ระบบ</h1>
+                        <label id="login" for="uname"><b>อีเมล</b></label>
+                        <input type="text" placeholder="กรอกอีเมล" name="uname" required>
+                        <label id="login" for="psw"><b>รหัสผ่าน</b></label>
+                        <input type="password" placeholder="กรอกรหัสผ่าน" name="psw" required>
+                        <input id="login" type="submit" name="submit" value="เข้าสู่ระบบ" onclick="">
+                        <p><a id="regist" href="Register.html">ลงทะเบียน</a></p>
+                    </div>
+                    <div class="contextconfoot" style="background-color:#f1f1f1">
+                        <input id="cancel" type="submit" name="cancel" value="ยกเลิก"
+                            onclick="window.location.href = 'index.html';">
+                        <p id="forgetpwd">ลืมรหัสผ่านใช่หรือไม่? <a id="click" href="Forgetpassword.html">คลิก!</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
