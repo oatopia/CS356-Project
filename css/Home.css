@@ -7,7 +7,7 @@ body {
   margin: 0px;
   /* background-color: #fff9f9; */
   background-color: #fed6d7;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 .LogoN2clothing {
@@ -53,12 +53,12 @@ body {
 }
 
 .manu-navbar a:hover {
-  color: #01406b;
+  color: #055a6d;
   transition-duration: 0.3s;
 }
 
 #home-link {
-  color: #01406b;
+  color: #055a6d;
 }
 
 .login-link {
@@ -69,6 +69,11 @@ body {
   color: #0883a0;
   /* color: #829568; */
   cursor: pointer;
+}
+
+.login-link:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
 }
 
 .line-vertical {
@@ -101,33 +106,40 @@ body {
 } */
 
 .collection-image {
-  margin-top: 50px;
+  margin-top: 5%;
   text-align: center;
 }
+
 
 .collection-contain {
   overflow: hidden;
   height: 300px;
   width: 300px;
   border-radius: 100%;
-  margin-left: 50px;
   display: inline-block;
   position: relative;
 }
 
+#first-collection{
+  margin-right: 30px;
+}
+
 .collection-contain img {
   height: 100%;
-  /* transition: transform 0.5s ease; */
+  width: 100%;
   transition-duration: 1s;
-  opacity: 0.9;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .collection-contain label {
   position: absolute;
-  font-size: 26px;
-  top: 50px;
-  left: 100px;
-  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  top: 42%;
+  left: 42%;
+  color: #ffffff;
+  z-index: 1;
 }
 
 .collection-contain:hover img {
@@ -136,3 +148,81 @@ body {
   opacity: 1;
   position: relative;
 }
+
+.Best-seller {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.Best-seller h1 {
+  font-size: 24px;
+  color: #01406b;
+}
+
+.best-seller-contain {
+  display: inline-block;
+  text-align: center;
+}
+
+.best-seller-contain-inner {
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.best-seller-contain-inner img {
+  height: 100%;
+  width: 100%;
+  transition-duration: 1s;
+  opacity: 0.9;
+}
+
+.best-seller-contain-inner:hover img {
+  transform: scale(1.1);
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.best-seller-contain p {
+  margin-top: 0px;
+  font-size: 18px;
+  color: #5c8e95;
+  margin-bottom: 0px;
+}
+
+.best-seller-contain h4 {
+  margin-top: 0px;
+  font-size: 18px;
+  color: #5c8e95;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#center-best{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn-choose{
+  margin-top: 0px;
+  border-radius: 20px;
+  color: white;
+  background-color: #1c98bc;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px ;
+  /* top left bottom right */
+}
+
+footer {
+  margin-top: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffb1af;
+  text-align: center;
+  color: white;
+}
+
