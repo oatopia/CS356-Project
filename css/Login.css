@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap');
 * {
   font-family: "Prompt", sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../Pictures/ln2.jpg");
+  /* font-family: Arial, Helvetica, sans-serif; */
+  background-image: url("../image/ln2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0px;
 }
 
 form {
@@ -25,7 +26,7 @@ form {
   max-width: 460px;
   height: 100%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 input[type="text"],
@@ -111,4 +112,52 @@ span.psw {
 
 #regist {
   font-weight: bold;
+}
+
+
+.LogoN2clothing{
+  height: 100px;
+}
+
+.Navbar-homepage{
+  background-color:#ffdbc7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.Navbar-contain-icon-menu{
+  display: flex;
+  width: 100%;
+}
+
+.manu-navbar{
+  align-items: center;
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  /* background-color: #f44336; */
+}
+
+.manu-navbar li{
+  list-style: none;
+  font-weight: 500;
+  font-size: 24px;
+  color: #d6801e;
+  cursor: pointer;
+}
+
+.manu-navbar li:hover{
+  color: #d6801e;
+  transition-duration: 0.3s;
+}
+
+.login-link{
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #744510;
+  cursor: pointer;
 }
