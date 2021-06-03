@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+* {
+  font-family: "Prompt", sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../Pictures/re3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* .form {
+    background-image: url("../Pictures/ln2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+.container {
+  max-width: 460px;
+  height: 100%;
+  margin: auto;
+  margin-top: 70px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: black;
+}
+
+input[type="submit"] {
+  background-color: darkcyan;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+input[name="cancel"] {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.contextcon {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.contextcon h1 {
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#space{
+  font-size: 16px;
+  font-weight: bold;
+}
