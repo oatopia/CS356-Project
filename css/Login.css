@@ -14,6 +14,7 @@ body {
 
 form {
   border: 3px solid #f1f1f1;
+  color: #744510;
 }
 
 /* .form {
@@ -37,8 +38,18 @@ input[type="password"] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-weight: bold;
-  color: black;
+  font-size: 18px;
+  outline: none;
+  color: #d6801e;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder{
+  color: #d6801e;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+  border-color: #744510;
 }
 
 input[type="submit"] {
@@ -150,7 +161,7 @@ span.psw {
 }
 
 .manu-navbar li:hover{
-  color: #d6801e;
+  color: #744510;
   transition-duration: 0.3s;
 }
 
@@ -160,4 +171,21 @@ span.psw {
   font-size: 24px;
   color: #744510;
   cursor: pointer;
+}
+
+.line-vertical{
+  height: 40px;
+  width: 2px;
+  background-color: #bdb3a8;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-login-cart{
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon{
+  height: 36px;
 }
