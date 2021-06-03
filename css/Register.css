@@ -4,31 +4,22 @@
 }
 
 body {
-  /* font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../image/re3.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   margin: 0px;
   background-color:#ffdbc7;
+  padding-bottom: 20px;
 }
 
 form {
+  margin-top: 40px;
   border: 3px solid #f1f1f1;
   color: #744510;
 }
 
-/* .form {
-    background-image: url("../Pictures/ln2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
 
 .container {
   max-width: 460px;
   height: 100%;
   margin: auto;
-  margin-top: 70px;
 }
 
 
@@ -104,6 +95,7 @@ input[name="cancel"] {
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
+  box-shadow: 0 2px 4px 0 rgba(176, 171, 171, 0.2);
 }
 
 .Navbar-contain-icon-menu{

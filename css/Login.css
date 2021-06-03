@@ -4,32 +4,21 @@
 }
 
 body {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* background-image: url("../image/ln2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   margin: 0px;
-  /* background-color: #ffcbb1; */
   background-color:#ffdbc7;
+  padding-bottom: 20px;
 }
 
 form {
+  margin-top: 20px;
   border: 3px solid #f1f1f1;
   color: #744510;
 }
-
-/* .form {
-  background-image: url("../Pictures/ln2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .container {
   max-width: 460px;
   height: 100%;
   margin: 0 auto;
-  margin-top: 30px;
 }
 
 input[type="text"],
@@ -140,6 +129,7 @@ span.psw {
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
+  box-shadow: 0 2px 4px 0 rgba(176, 171, 171, 0.2);
 }
 
 .Navbar-contain-icon-menu{
@@ -158,14 +148,17 @@ span.psw {
 
 .manu-navbar li{
   list-style: none;
-  font-weight: 500;
-  font-size: 24px;
-  color: #d6801e;
-  /* color: #6c8460; */
   cursor: pointer;
 }
 
-.manu-navbar li:hover{
+.manu-navbar a{
+  font-weight: 500;
+  font-size: 24px;
+  color: #d6801e;
+  text-decoration: none;
+}
+
+.manu-navbar a:hover{
   color: #744510;
   transition-duration: 0.3s;
 }
@@ -178,6 +171,7 @@ span.psw {
   color: #744510;
   /* color: #829568; */
   cursor: pointer;
+  text-decoration: none;
 }
 
 .line-vertical{
