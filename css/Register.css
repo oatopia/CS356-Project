@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap');
 * {
   font-family: "Prompt", sans-serif;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../Pictures/re3.jpg");
+  background-image: url("../image/re3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0px;
 }
 
 form {
   border: 3px solid #f1f1f1;
+  color: #744510;
 }
 
 /* .form {
@@ -37,8 +39,20 @@ input[type="password"] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-weight: bold;
   color: black;
+  outline: none;
+  font-size: 18px;
+  color: #d6801e;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #d6801e;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+  border-color: #744510;
 }
 
 input[type="submit"] {
@@ -76,4 +90,67 @@ input[name="cancel"] {
 #space{
   font-size: 16px;
   font-weight: bold;
+}
+
+.LogoN2clothing{
+  height: 100px;
+}
+
+.Navbar-homepage{
+  background-color:#ffdbc7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.Navbar-contain-icon-menu{
+  display: flex;
+  width: 100%;
+}
+
+.manu-navbar{
+  align-items: center;
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.manu-navbar li{
+  list-style: none;
+  font-weight: 500;
+  font-size: 24px;
+  color: #d6801e;
+  cursor: pointer;
+}
+
+.manu-navbar li:hover{
+  color: #744510;
+  transition-duration: 0.3s;
+}
+
+.login-link{
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #744510;
+  cursor: pointer;
+}
+
+.line-vertical{
+  height: 40px;
+  width: 2px;
+  background-color: #bdb3a8;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-login-cart{
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon{
+  height: 36px;
 }
