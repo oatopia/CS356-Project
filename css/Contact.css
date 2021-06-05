@@ -1,4 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap");
 * {
   font-family: "Prompt", sans-serif;
+}
+
+body {
+  margin: 0px;
+  background-color: #fed6d7;
+  padding-bottom: 0px;
+}
+
+.LogoN2clothing {
+  height: 100px;
+}
+
+.Navbar-homepage {
+  background-color: #fff9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 0 2px 4px 0 rgba(176, 171, 171, 0.2);
+}
+
+.Navbar-contain-icon-menu {
+  display: flex;
+  width: 100%;
+}
+
+.manu-navbar {
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.manu-navbar li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.manu-navbar a {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  text-decoration: none;
+}
+
+.manu-navbar a:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+#home-link {
+  color: #055a6d;
+}
+
+.login-link {
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+.line-vertical {
+  height: 40px;
+  width: 2px;
+  background-color:#7c848c;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-login-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  height: 36px;
+  cursor: pointer;
+}
+
+
+.Contact-detail{
+  text-align: center;
+}
+
+.Contact-detail h1{
+  font-size: 32px;
+  font-weight: bold;
+  color: #055a6d;
+}
+
+.Contact-detail h2{
+  font-size: 20px;
+  font-weight: normal;
+  color: #0883a0;
+}
+
+
+footer {
+  margin-top: 3%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffb1af;
+  text-align: center;
+  color: white;
+}
+
+.text-contact{
+  width: fit-content;
+  /* background-color: yellow; */
+  text-align: start;
+  margin-left: auto;
+  margin-right: auto;
 }
