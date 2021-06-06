@@ -5,8 +5,10 @@
 
 body {
   margin: 0px;
+  min-height: 100vh;
   background-color: #fed6d7;
   padding-bottom: 0px;
+  position: relative;
 }
 
 .LogoN2clothing {
@@ -98,6 +100,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   color: #055a6d;
+  margin-bottom: 4%;
 }
 
 .Contact-detail h2{
@@ -106,14 +109,8 @@ body {
   color: #0883a0;
 }
 
-
-footer {
-  margin-top: 3%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #ffb1af;
-  text-align: center;
-  color: white;
+#N2-OFFICE{
+ font-weight: bold; 
 }
 
 .text-contact{
@@ -123,3 +120,30 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.icon-text-contact{
+  display: flex;
+  align-items: center;
+}
+
+.icon-text-contact img{
+  height: 25px;
+  margin-right: 15px;
+}
+
+
+
+
+footer {
+  position: absolute;
+  /* margin-top: 3%; */
+  width: 100%;
+  /* bottom: 0px; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffb1af;
+  text-align: center;
+  color: white;
+}
+
