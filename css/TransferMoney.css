@@ -1,4 +1,234 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap");
 * {
   font-family: "Prompt", sans-serif;
 }
+
+body {
+  margin: 0px;
+  min-height: 100vh;
+  background-color: hsl(359, 95%, 92%);
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.LogoN2clothing {
+  height: 100px;
+}
+
+.Navbar-homepage {
+  background-color: #fff9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 0 2px 4px 0 rgba(176, 171, 171, 0.2);
+}
+
+.Navbar-contain-icon-menu {
+  display: flex;
+  width: 100%;
+}
+
+.menu-navbar {
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.menu-navbar li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu-navbar a {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  text-decoration: none;
+}
+
+.menu-navbar a:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+#order-link {
+  color: #055a6d;
+}
+
+#transferMoney-link {
+  color: #055a6d;
+}
+
+.login-link {
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+.line-vertical {
+  height: 40px;
+  width: 2px;
+  background-color:#7c848c;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-login-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  height: 36px;
+  cursor: pointer;
+}
+
+
+.sub-menu-navbar{
+  display: none;
+}
+
+
+.HowToOrder-link:hover .sub-menu-navbar{
+  display: block;
+  position: absolute;
+  width: fit-content;
+  background-color: #fbf3f3;
+  /* padding: 10px; */
+  padding: 10px 10px 10px 0px;
+  border-radius: 10px;
+  
+}
+
+.sub-menu-navbar a{
+  margin-left: -30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.TransferMoney-content h1{
+  text-align: center;
+  font-size: 28px;
+  color: #0883a0;
+}
+
+.table-Account{
+  width: 100%;
+}
+
+.table-Account img{
+  height: 40px;
+}
+
+.table-Account input[type=radio]{
+  vertical-align: 12px;
+}
+
+.TransferMoney-content{
+  color: #0883a0;
+}
+
+.TransferMoney-content h2{
+  font-size: 22px;
+  margin-left: 4%;
+}
+
+.table-Account td{
+  text-align: center;
+}
+
+.SCB-Account p{
+  color: #4e2e7f;
+}
+
+.BBL-Account p{
+  color: #1e4598;
+}
+
+
+.detail {
+  margin-left: 10%;
+  width: 30%;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.detail p{
+  font-size: 20px;
+
+}
+
+.detail input[type=text]{
+  height: 35%;
+  border-radius: 2px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 16px;
+  color: gray;
+}
+
+
+.payment{
+  margin-left: 10%;
+  width: 35%;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.payment p{
+  font-size: 18px;
+
+}
+
+.payment input[type=text]{
+  height: 35%;
+  width: 50%;
+  border-radius: 2px;
+  border-color: teal;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 16px;
+  color: gray;
+}
+
+.block-btn-payment{
+  text-align: center;
+}
+
+.btn-save-payment{
+  padding: 10px 20px 10px 20px;
+  background-color: #055a6d;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  
+}
+
+
+footer {
+  margin-top: 3%;
+  position: absolute;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffb1af;
+  text-align: center;
+  color: white;
+}
+
+

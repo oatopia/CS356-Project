@@ -158,3 +158,25 @@ input[name="cancel"] {
   height: 36px;
   cursor: pointer;
 }
+
+.sub-menu-navbar{
+  display: none;
+}
+
+
+.HowToOrder-link:hover .sub-menu-navbar{
+  display: block;
+  position: absolute;
+  width: fit-content;
+  background-color: #fbf3f3;
+  /* padding: 10px; */
+  padding: 10px 10px 10px 0px;
+  border-radius: 10px;
+  
+}
+
+.sub-menu-navbar a{
+  margin-left: -30px;
+  font-size: 18px;
+  font-weight: normal;
+}

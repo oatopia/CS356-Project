@@ -55,7 +55,11 @@ body {
   transition-duration: 0.3s;
 }
 
-#home-link {
+#order-link {
+  color: #055a6d;
+}
+
+#howtoOrder-link {
   color: #055a6d;
 }
 
@@ -109,7 +113,7 @@ body {
 }
 
 .sub-menu-navbar a{
-  margin-left: -20px;
+  margin-left: -30px;
   font-size: 18px;
   font-weight: normal;
 }

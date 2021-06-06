@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransferMoney</title>
+    <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
+    <link rel="stylesheet" href="../css/TransferMoney.css">
+    </header>
+
+<body>
+    <header>
+        <div class="Navbar-homepage">
+            <div class="Navbar-contain-icon-menu">
+                <img class="LogoN2clothing" src="../image/LogoN2clothing.png" />
+                <ul class="menu-navbar">
+                    <li><a href="../html/Home.html" id="home-link">หน้าแรก</a></li>
+                    <li><a>สินค้า</a></li>
+                    <li class="HowToOrder-link"><a id="order-link">การสั่งซื้อสินค้า</a>
+                        <div class="sub-menu-navbar">
+                            <ul>
+                                <li><a id="howtoOrder-link" href="../html/HowToOrder.html">วิธีการสั่งซื้อสินค้า</a></li>
+                                <li><a id="transferMoney-link" href="../html/TransferMoney.html">แจ้งโอนเงิน</a></li>
+                            </ul>
+                        </div>
+                            
+                    </li>
+                    <li><a href="../html/Contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-login-cart">
+                <a class="login-link" href="../html/Login.html">เข้าสู่ระบบ</a>
+                <div class="line-vertical"></div>
+                <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+            </div>
+
+        </div>
+    </header>
+
+    <section class="TransferMoney-content">
+        <h1>แจ้งโอนเงิน</h1>
+        <div class="chooseAccount-content">
+            <h2>เลือกบัญชีที่โอนเข้า</h2>
+            <table class="table-Account">
+                <thead>
+                    <tr>
+                        <th>
+                            ธนาคาร
+                        </th>
+                        <th>
+                            ชื่อธนาคาร
+                        </th>
+                        <th>
+                            ชื่อบัญชี
+                        </th> 
+                        <th>
+                            เลขบัญชี
+                        </th>  
+                    </tr>
+                    <tr class="SCB-Account">
+                        <td>
+                            <input type="radio"/>
+                            <img src="../image/scb.png">
+                        </td>
+                        <td>
+                            <p>ธนาคารไทยพาณิชย์</p>
+                        </td>
+                        <td>
+                            <p>Kanchana Don</p>
+                        </td> 
+                        <td>
+                            <p>407-240-0244</p>
+                        </td>  
+                    </tr>
+                    <tr class="BBL-Account">
+                        <td>
+                            <input type="radio"/>
+                            <img src="../image/BBl.png">
+                        </td>
+                        <td>
+                            <p>ธนาคารกรุงเทพ</p>
+                        </td>
+                        <td>
+                            <p>Thanapat Tan</p>
+                        </td> 
+                        <td>
+                            <p>826-523-8850</p>
+                        </td>  
+                    </tr>
+                                   
+                </thead>
+            </table>
+            <div class="Account-table">
+
+            </div>
+        </div>
+
+        <div class="customer-detail">
+            <h2>ข้อมูลลูกค้า</h2>
+            <div class="detail">
+                <p>ชื่อผู้โอน*</p>
+                <input type="text"/>
+                <p>เบอร์โทร*</p>
+                <input type="text"/>
+            </div>
+        </div>
+
+        <div class="payment-detail">
+            <h2>ข้อมูลการชำระเงิน</h2>
+            <div class="payment">
+                <p>เลขที่สั่งซื้อ#</p>
+                <input type="text" placeholder="xxx"/>
+                <p>จำนวนเงิน</p>
+                <input type="text" placeholder="0.00"/>
+                <p>อัปโหลดสลิป</p>
+                <input type="file"/>
+            </div>
+        </div>
+
+        <div class="block-btn-payment">
+            <button class="btn-save-payment">แจ้งการชำระเงิน</button>
+        </div>
+        
+    </section>
+
+
+
+
+
+    <footer>
+        <p>Copyright © N2clothing</p>
+    </footer>
+</body>
+
+</html>
