@@ -126,12 +126,14 @@ body {
 .left-content h1{
   margin-left: 10%;
   font-size: 28px;
+  color: #0883a0;
 }
 
 .left-content li{
   text-align: start;
   list-style: none;
   font-size: 24px;
+  color: #0883a0;
 }
 
 .right-content{
@@ -158,8 +160,6 @@ body {
 footer {
   clear: both;
   margin-top: 3%;
-  /* bottom: 0px; */
-  /* position: absolute; */
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
