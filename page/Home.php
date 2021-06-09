@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['Username'])){
+        echo "NOT LOGIN";
+        header("http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
+    }
+    $user = $_SESSION['Username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +40,8 @@
             </div>
             
             <div class="menu-login-cart">
-                <a class="login-link" href="../html/Login.html" >เข้าสู่ระบบ</a>
+                <a class="login-link" ><?= $user; ?></a>
+                <a class="login-link" href="../service/Logout.php" >Log out</a>
                 <div class="line-vertical"></div>
                 <img class="cart-icon" src="../image/icon/shopping-cart 1.png"/>
             </div>
