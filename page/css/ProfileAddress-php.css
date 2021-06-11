@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap");
+* {
+  font-family: "Prompt", sans-serif;
+}
+
+body {
+  margin: 0px;
+  background-color: #fed6d7;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.LogoN2clothing {
+  height: 100px;
+}
+
+.Navbar-homepage {
+  background-color: #fff9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 0 2px 4px 0 rgba(176, 171, 171, 0.2);
+}
+
+.Navbar-contain-icon-menu {
+  display: flex;
+  width: 100%;
+}
+
+.manu-navbar {
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.manu-navbar li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.manu-navbar a {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  text-decoration: none;
+}
+
+.manu-navbar a:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+.login-link {
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
+
+.line-vertical {
+  height: 40px;
+  width: 2px;
+  background-color:#7c848c;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-login-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  height: 36px;
+  cursor: pointer;
+}
+
+
+.sub-menu-navbar{
+  display: none;
+}
+
+
+.HowToOrder-link:hover .sub-menu-navbar{
+  display: block;
+  position: absolute;
+  width: fit-content;
+  background-color: #fbf3f3;
+  padding: 10px 10px 10px 0px;
+  border-radius: 10px;
+  
+}
+
+.sub-menu-navbar a{
+  margin-left: -30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+
+
+.username-p {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 24px;
+    color: #0883a0;
+    cursor: pointer;
+  }
+  
+  .username-p:hover {
+    color: #055a6d;
+    transition-duration: 0.3s;
+  }
+
+
+
+.sub-menu-navbar-profile{
+    display: none;
+  }
+
+  .sub-menu-navbar-profile ul{
+      margin: 0px;
+      /* background-color: chartreuse; */
+      padding: 0px;
+  }
+
+.sub-menu-navbar-profile a{
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #1c98bc;
+  }
+
+.sub-menu-navbar-profile li:hover{
+    color: #177a98;
+    background-color: #c7e2e7;
+    width: 100%;
+  }
+
+  .sub-menu-navbar-profile li{
+      padding: 10px 20px 10px 20px;
+  }
+
+
+
+.Username-link:hover .sub-menu-navbar-profile{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    overflow: hidden;
+    background-color: #fbf3f3;
+    border-radius: 10px;
+  }
+
+.Username-link , .Username-link li{
+    list-style: none;
+    text-decoration: none;
+    
+
+}  
+
+.address-link{
+    background-color: #c7e2e7;
+}
+
+.header-Address{
+    background-color: #6ea8b0;
+    padding: 5px 0px 5px 0px;
+}
+
+.header-Address h1{
+    font-size: 32px;
+    color: white;
+    margin-left: 10%;
+}
+
+
+
+
+.content-Address{
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    
+}
+
+.left-menu{
+/* background-color: #0883a0; */
+padding: 20px 0px 20px 30px;
+width: 25%;
+border-right: 1px solid #a5dbe3;
+}
+
+
+.icon-user{
+    width: 32%;
+    margin-right: 10px;
+}
+
+
+.icon-username{
+    display: flex;
+}
+
+.icon-username h2{
+    color: 
+    #1c98bc;
+    font-weight: normal;
+}
+
+.left-menu ul{
+    padding-left: 0px;
+}
+
+.left-menu li{
+    
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #a5dbe3;
+    cursor: pointer;
+}
+
+.left-menu a{
+    font-size: 18px;
+    color: #1c98bc;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+.left-menu li:hover {
+    border-right: 5px solid #1c98bc;
+    transition-duration: 0.1s;
+    color: #3f7585;
+    font-weight: bold;
+}
+
+
+.right-content{
+    width: 100%;
+}
+
+.right-content h2{
+    color: #1c98bc;
+    margin-left: 20px;
+    font-weight: normal;
+}
+
+.here{
+    color: #3f7585;
+    font-weight: bold;
+    border-right: 5px solid #1c98bc;
+}
+
+    
+footer {
+  position: absolute;
+  width: 100%;
+  margin-top: 3%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffb1af;
+  text-align: center;
+  color: white;
+}
+

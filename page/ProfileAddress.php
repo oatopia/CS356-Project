@@ -7,6 +7,7 @@
     $user = $_SESSION['Username'];
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>ProfileAddress</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/Home-php.css">
+    <link rel="stylesheet" href="./css/ProfileAddress-php.css">
 </header>
 <body>
     <header>
@@ -44,7 +45,7 @@
                 <div class="sub-menu-navbar-profile">
                             <ul>
                                 <li><a href="./ProfileOrder.php">คำสั่งซื้อ</a></li>
-                                <li><a href="./ProfileAddress.php">ที่อยู่</a></li>
+                                <li class="address-link"><a href="./ProfileAddress.php" >ที่อยู่</a></li>
                                 <li><a href="../service/Logout.php">ออกจากระบบ</a></li>
                             </ul>
                     </div>
@@ -56,54 +57,33 @@
         </div>
     </header>
 
-    <section class="slide-image">
-            <img class="image-slide" src="../image/showimage.jpg" style="width: 100%;"/>
-    </section>
 
-    <section class="collection-image">
-        <div id="first-collection" class="collection-contain">
-            <label>เสื้อ</label>
-            <img src="../image/shirt.jpg"/>
+    <section class="ProfileAddress-container">
+        <div class="header-Address">
+            <h1>ที่อยู่ของลูกค้า</h1>
         </div>
-        
-        <div class="collection-contain">
-            <label>เดรส</label>
-            <img src="../image/dress.jpg"/>
-        </div>
-    </section>
-
-    <section class="Best-seller">
-        <h1>สินค้าขายดี</h1>
-        <div class="best-seller-contain">
-            <div class="best-seller-contain-inner">
-                <img src="../image/best-1.jpg"/>
+        <div class="content-Address">
+            <div class="left-menu">
+                <div class="icon-username">
+                    <img class="icon-user" src="../image/icon/profile-user.png"/>
+                    <h2><?= $user; ?></h2>
+                </div>
+                <ul>
+                    <li>
+                        <a href="./ProfileOrder.php">คำสั่งซื้อ</a>
+                    </li>
+                    <li class="here">
+                        <a href="./ProfileAddress.php">ที่อยู่</a>
+                    </li>
+                    <li>
+                        <a href="../service/Logout.php">ออกจากระบบ</a>
+                    </li>
+                </ul>
             </div>
-            <p>Two-Tone</p>
-            <h4>฿410</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
-        </div>
-        
-        <div id="center-best" class="best-seller-contain">
-            <div  class="best-seller-contain-inner">
-                <img src="../image/best-2.jpg"/>
+            <div class="right-content">
+                <h2>ที่อยู่นี้จะถูกใช้ในหน้าการสั่งซื้อ</h2>
             </div>
-            <p>Macaron</p>
-            <h4>฿420</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
         </div>
-        
-        <div class="best-seller-contain">
-            <div class="best-seller-contain-inner">
-                <img src="../image/best-3.jpg"/>
-            </div>
-            <p>Cake</p>
-            <h4>฿420</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
-        </div>
-    </section>
-
-    <section class="btn-all-item-contain">
-        <button class="btn-all-item">ดูสินค้าทั้งหมด</button>
     </section>
     
     <footer>
