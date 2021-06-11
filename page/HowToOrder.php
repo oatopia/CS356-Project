@@ -27,7 +27,7 @@
                 <img class="LogoN2clothing" src="../image/LogoN2clothing.png" />
                 <ul class="menu-navbar">
                     <li><a href="./Home.php" id="home-link">หน้าแรก</a></li>
-                    <li><a href="../html/AllOrder.html">สินค้า</a></li>
+                    <li><a href="./AllOrder.php">สินค้า</a></li>
                     <li class="HowToOrder-link"><a id="order-link">การสั่งซื้อสินค้า</a>
                         <div class="sub-menu-navbar">
                             <ul>
