@@ -6,8 +6,9 @@
 body {
   margin: 0px;
   min-height: 100vh;
-  background-color: #fed6d7;
+  background-color: hsl(359, 95%, 92%);
   padding-bottom: 0px;
+  /* position: relative; */
 }
 
 .LogoN2clothing {
@@ -54,13 +55,6 @@ body {
   transition-duration: 0.3s;
 }
 
-#allorder-link {
-  color: #055a6d;
-}
-
-#transferMoney-link {
-  color: #055a6d;
-}
 
 .login-link {
   text-decoration: none;
@@ -116,59 +110,133 @@ body {
   font-weight: normal;
 }
 
-.left-content{
-  float: left;
-  width: 20%;
-  height: 100vh;
+.detail-order{
+  padding: 20px 30px 20px 30px;
+  display: inline-flex;
 }
 
-.left-content h1{
-  margin-left: 10%;
-  font-size: 28px;
-  color: #0883a0;
+.detail-order img{
+  width: 50%;
+  border-radius: 10px;
 }
 
-.left-content li{
-  padding: 10px 0px 10px 0px;
-  border-bottom: 1px solid #0883a0;
-  text-align: start;
-  list-style: none;
-  font-size: 24px;
-  color: #0883a0;
-  cursor: pointer;
+.image-goods{
+  display: block;
+  width: 70%;
 }
 
-.left-content a{
-  cursor: pointer;
-  
-}
-
-.left-content li:hover{
-  color: #055a6d;
-  font-weight: bold;
-}
-.right-content{
-  float: left;
-  width: 80%;
-}
-
-.all-goods{
-  display: grid;
-  grid-template-columns: repeat(auto-fill,300px);
-  gap: 10px;
-  row-gap: 30px;
-  justify-items: center;
-  padding: 30px 0px 10px 30px;
-}
-
-.goods{
+.detail-goods{
+  /* background-color: aqua; */
   width: 100%;
-  height: 300px;
-  background-color: violet;
 }
 
 
+.select-size-container{
+  display: flex;
+  align-items: center;
+}
 
+.select-size-container p{
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.detail {
+  /* background-color: tomato; */
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  /* margin-left: 50px; */
+  color: #0883a0;
+}
+
+.select-size{
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+
+.goods-collection{
+  font-size: 42px;
+  margin: 0px;
+}
+
+.good-price{
+  font-size: 32px;
+}
+
+
+.input-number{
+  justify-content: center;
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+}
+
+.input-number {
+  display: flex;
+}
+.input-number button{
+  height: 105%;
+  outline: none;
+  border: none;
+  width: 30px;
+  font-size: 28px;
+}
+
+.btn-minus{
+  /* margin */
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.btn-plus{
+  border-radius: 0px 20px 20px 0px;
+}
+
+.input-text-number{
+  font-size: 18px;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+
+.input-text-number::-webkit-outer-spin-button,
+.input-text-number::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+input,button {
+  display: block;
+}
+
+
+.btn-pickup{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px 10px 20px;
+  background-color:#0883a0;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  margin-top: 30px;
+}
+
+.btn-pickup:hover{
+  background-color: #055a6d;
+  transition-duration: 0.5s;
+}
 
 
 .username-p {
@@ -231,62 +299,13 @@ body {
     text-decoration: none;
     
 
-}  
-
-.product-collection{
-  text-align: center;
-  padding: 0px 20px 20px 20px;
 }
 
-.product-collection h1{
-  font-size: 20px;
-  font-weight: normal;
-  color: #5c8e95;
-  margin: 0px;
-}
 
-.btn-choose{
-  margin-top: 0px;
-  border-radius: 20px;
-  color: white;
-  background-color: #1c98bc;
-  border: none;
-  font-size: 18px;
-  padding: 10px 20px 10px 20px ;
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
 
-.btn-choose:hover{
-  background-color: #177a98;
-  transition-duration: 0.5s;
-}
-
-.image-collection-container {
-  overflow: hidden;
-  height: 270px;
-  width: 250px;
-  border-radius: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-.image-collection{
-  height: 100%;
-  width: 100%;
-  transition-duration: 1s;
-  opacity: 1;
-}
-
-.image-collection-container:hover img{
-  transform: scale(1.1);
-  transition-duration: 1s;
-  opacity: 0.7;
-}
 
 footer {
   clear: both;
-  margin-top: 3%;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;

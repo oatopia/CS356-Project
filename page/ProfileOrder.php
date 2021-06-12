@@ -3,7 +3,7 @@
     session_start();
     if(!isset($_SESSION['Username'])){
         echo "NOT LOGIN";
-        header("http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
+        header("Location: http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
     }
     $user = $_SESSION['Username'];
 ?>
