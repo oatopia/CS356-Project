@@ -15,11 +15,11 @@
    //select all product
    $sql = "SELECT * FROM product WHERE Product_collection = '$c_name' ";
     $result = $conn->query($sql);
-    $Array = array();
+    $Arrayproduct = array();
    while($row = $result->fetch_assoc()){
-       $Array[] = array("ID_product"=>$row['ID_product'],"Product_color"=>$row['Product_color']
-       ,"Product_price"=>$row['Product_price'],"Product_image"=>$row['Product_image']
-       ,"Product_type"=>$row['Product_type'],"Product_collection"=>$row['Product_collection']);
+       $Arrayproduct[] = array("ID_product"=>$row["ID_product"],"Product_color"=>$row["Product_color"]
+       ,"Product_price"=>$row["Product_price"],"Product_image"=>$row["Product_image"]
+       ,"Product_type"=>$row["Product_type"],"Product_collection"=>$row["Product_collection"]);
    }
 ?>
 
@@ -76,25 +76,35 @@
     </header>
 
     <section class="detail-order">
-        <img src="../image/background.jpg"/>
+        <div class="image-goods">
+            <?php 
+                foreach($Arrayproduct as $image){
+                    echo'<div class="Image-product-slide fade">';
+                    echo'<img class="Image-product" src="../image/product/'.$image["Product_image"].' " />';
+                    echo'</div>';
+                }
+            ?>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
         <div class="detail-goods">
             <div class="detail">
                 <h1 class="goods-collection"><?=$c_name;?></h1>
                 <h1 class="goods-type"><?=$c_type;?></h1>
                 <h1 class="goods-price">฿<?=$c_price;?></h1>
-                <div class="select-size-container">
+                <div class="select-container">
                     <p>สี</p>
-                    <select class="select-size">
+                    <select class="select-tag">
                     <?php 
-                        foreach($Array as $Array){
-                            echo'<option  value=\''.$Array['Product_color'].'\'>'.$Array['Product_color'].'</option>';
+                        foreach($Arrayproduct as $color){
+                            echo'<option value="'.$color["Product_color"].'">'.$color["Product_color"].'</h1>';
                         }  
                     ?>
                     </select>
                 </div>
-                <div class="select-size-container">
+                <div class="select-container">
                     <p>ไซส์</p>
-                    <select class="select-size">
+                    <select class="select-tag">
                         <option>XS</option>
                         <option>S</option>
                         <option>M</option>
@@ -102,13 +112,15 @@
                         <option>XL</option>
                     </select>
                 </div>
-                
-                <div class="input-number">
-                    <button class="btn-minus">-</button>
-                    <input class="input-text-number" type="number" value="1"/>
-                    <button class="btn-plus">+</button>
+                <div class="number-pick-container">
+                    <div class="input-number">
+                        <button class="btn-minus">-</button>
+                        <input class="input-text-number" type="number" value="1"/>
+                        <button class="btn-plus">+</button>
+                    </div>
+                    <button class="btn-pickup">หยิบใส่ตะกร้า</button>
                 </div>
-                <button class="btn-pickup">หยิบใส่ตะกร้า</button>
+                
             </div>
             
         </div>
@@ -117,6 +129,29 @@
     <footer>
         <p>Copyright © N2clothing</p>
     </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Image-product-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 
 </html>
