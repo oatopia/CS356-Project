@@ -93,24 +93,28 @@
                 <h1 class="goods-type"><?=$c_type;?></h1>
                 <h1 class="goods-price">฿<?=$c_price;?></h1>
                 <div class="select-container">
-                    <p>สี</p>
-                    <select class="select-tag">
-                    <?php 
+                    <div class="select-block">
+                        <p>สี</p>
+                        <select class="select-tag">
+                        <?php 
                         foreach($Arrayproduct as $color){
                             echo'<option value="'.$color["Product_color"].'">'.$color["Product_color"].'</h1>';
                         }  
-                    ?>
-                    </select>
+                        ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="select-container">
-                    <p>ไซส์</p>
-                    <select class="select-tag">
+                    <div class="select-block">
+                        <p>ไซส์</p>
+                        <select class="select-tag">
                         <option>XS</option>
                         <option>S</option>
                         <option>M</option>
                         <option>L</option>
                         <option>XL</option>
-                    </select>
+                        </select>
+                    </div>
                 </div>
                 <div class="number-pick-container">
                     <div class="input-number">
