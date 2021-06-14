@@ -169,6 +169,11 @@ body {
 }
 
 
+#link-dress{
+    color: #055a6d;
+    font-weight: 500;
+  }
+
 
 .username-p {
     position: relative;
@@ -224,7 +229,6 @@ body {
     background-color: #fbf3f3;
     border-radius: 10px;
     z-index: 2;
-    overflow: hidden;
   }
 
 .Username-link , .Username-link li{
@@ -235,9 +239,9 @@ body {
 }  
 
 .product-collection{
-  z-index: 1;
   text-align: center;
   padding: 0px 20px 20px 20px;
+  z-index: 1;
 }
 
 .product-collection h1{

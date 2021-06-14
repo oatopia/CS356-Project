@@ -4,6 +4,10 @@
         echo "NOT LOGIN";
         header("Location: http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
     }
+
+
+
+
     $user = $_SESSION['Username'];
     $c_name = $_GET['collection_name'];
     $c_price = $_GET['collection_price'];
@@ -21,6 +25,15 @@
        ,"Product_price"=>$row["Product_price"],"Product_image"=>$row["Product_image"]
        ,"Product_type"=>$row["Product_type"],"Product_collection"=>$row["Product_collection"]);
    }
+
+   if(!isset($_SESSION["order"])){
+    $_SESSION["order"] = 0;
+    // $_SESSION["Product_name"][0] = $;
+    $_SESSION["Product_color"][0] = $_GET["p_color"];
+    $_SESSION["Product_size"][0] = $_GET["p_size"];
+    $_SESSION["Product_Num"][0] = $_GET["p_number"];
+    }
+    echo $_GET["p_color"];
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +82,24 @@
                     </div>
                 </li>
                 <div class="line-vertical"></div>
-                <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                <div>
+                    <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                    <?php
+                        if(isset($_SESSION["order"])){
+                            for ($i=0; $i <=(int)$_SESSION["order"] ; $i++) { 
+                                
+                    ?>
+                                <div class="cart-p">
+                                    <h1><?php echo $_SESSION["Product_color"][$i];?></h1>
+                                    <h1><?php echo $_SESSION["Product_size"][$i];?></h1>
+                                </div>
+
+                    <?php
+                            }
+                        }
+                    ?>
+                </div>
+                
             </div>
 
         </div>
@@ -79,7 +109,7 @@
         <div class="image-goods">
             <?php 
                 foreach($Arrayproduct as $image){
-                    echo'<div class="Image-product-slide fade">';
+                    echo'<div  class="Image-product-slide fade">';
                     echo'<img class="Image-product" src="../image/product/'.$image["Product_image"].' " />';
                     echo'</div>';
                 }
@@ -89,13 +119,17 @@
         </div>
         <div class="detail-goods">
             <div class="detail">
-                <h1 class="goods-collection"><?=$c_name;?></h1>
-                <h1 class="goods-type"><?=$c_type;?></h1>
-                <h1 class="goods-price">฿<?=$c_price;?></h1>
+                <form href="../service/Order.php" method='post'>
+                <h1 class="goods-collection" name="p_name"><?=$c_name;?></h1>
+                <h1 class="goods-type" name="p_type"><?=$c_type;?></h1>
+                <h1 class="goods-price" name="p_price">฿<?=$c_price;?></h1>
+                
                 <div class="select-container">
-                    <div class="select-block">
-                        <p>สี</p>
-                        <select class="select-tag">
+                    <div class="select-label">
+                        <label>สี</label>
+                    </div>
+                    <div class="select-input">
+                    <select class="select-tag" name="p_color">
                         <?php 
                         foreach($Arrayproduct as $color){
                             echo'<option value="'.$color["Product_color"].'">'.$color["Product_color"].'</h1>';
@@ -103,28 +137,34 @@
                         ?>
                         </select>
                     </div>
+                        
+                    
                 </div>
                 <div class="select-container">
-                    <div class="select-block">
-                        <p>ไซส์</p>
-                        <select class="select-tag">
-                        <option>XS</option>
+                    <div class="select-label">
+                        <label>ไซส์</label>
+                    </div>
+                    <div class="select-input">
+                    <select class="select-tag" name="p_size">
+                        <option >XS</option>
                         <option>S</option>
                         <option>M</option>
                         <option>L</option>
                         <option>XL</option>
                         </select>
                     </div>
+                        
+                    
                 </div>
                 <div class="number-pick-container">
                     <div class="input-number">
-                        <button class="btn-minus">-</button>
-                        <input class="input-text-number" type="number" value="1"/>
-                        <button class="btn-plus">+</button>
+                        <button class="btn-minus" onclick="decrement();">-</button>
+                        <input id="input-number" name="p_number" class="input-text-number" type="number" value="1"/>
+                        <button class="btn-plus" onclick="increment();">+</button>
                     </div>
-                    <button class="btn-pickup">หยิบใส่ตะกร้า</button>
+                    <button class="btn-pickup" type="submit" >หยิบใส่ตะกร้า</button>
                 </div>
-                
+                </form>
             </div>
             
         </div>
@@ -134,6 +174,20 @@
         <p>Copyright © N2clothing</p>
     </footer>
     <script>
+        function increment(){
+            var input = document.getElementById("input-number");
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrement(){
+            var input = document.getElementById("input-number");
+            if(input.value == 1){
+
+            }else{
+                input.value = parseInt(input.value) - 1;
+            }
+            
+        }
         var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -155,6 +209,7 @@
             }
             slides[slideIndex-1].style.display = "block";  
         }
+
     </script>
 </body>
 

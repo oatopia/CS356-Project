@@ -10,7 +10,7 @@
         die("Connection failed: " . $conn->connect_error);
    }
    //select all product
-   $sql = "SELECT * FROM collection_product";
+   $sql = "SELECT * FROM collection_product WHERE Collection_type='Shirt'";
     $result = $conn->query($sql);
     $Array = array();
    while($row = $result->fetch_assoc()){
@@ -31,9 +31,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AllOrder</title>
+    <title>AllOrder-shirt</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/AllOrder-php.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./css/AllOrder-shirt-php.css?v=<?php echo time(); ?>">
     </header>
 
 <body>
@@ -78,8 +78,8 @@
     <section class="left-content">
         <h1>รายการ</h1>
         <ul>
-            <li><a href="./AllOrder-shirt.php">เสื้อ</a></li>
-            <li><a href="./AllOrder-dress.php">เดรส</a></li>
+            <li><a href="./AllOrder-shirt.php" id="link-shirt">เสื้อ</a></li>
+            <li><a  href="./AllOrder-dress.php">เดรส</a></li>
         </ul>
     </section>
 

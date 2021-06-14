@@ -191,15 +191,20 @@ body {
   background-color: rgba(0,0,0,0.8);
 }
 
-.select-block{
-  padding: 0px;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
-  /* background-color: teal; */
+
+.select-label{
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
 }
+
+.select-input{
+  float: left;
+  width: 75%;
+  margin-bottom: 10px;
+}
+
+
 
 .select-container{
   display: flex;
@@ -208,7 +213,7 @@ body {
   /* flex-wrap: nowrap; */
 }
 
-.select-container p{
+.select-container label{
   margin-right: 10px;
   font-size: 20px;
 }
@@ -216,7 +221,7 @@ body {
 .select-tag{
   font-size: 16px;
   height: 40px;
-  width: 200px;
+  width: 100%;
   border-radius: 15px;
   outline: none;
   border: none;
@@ -256,18 +261,19 @@ body {
 .input-number{
   justify-content: center;
   height: 50px;
-  width: 40%;
+  width: 35%;
 }
 
 .input-number {
   display: flex;
 }
 .input-number button{
-  height: 105%;
+  height: 104%;
   outline: none;
   border: none;
-  width: 30px;
+  width: 50px;
   font-size: 28px;
+  cursor: pointer;
 }
 
 .btn-minus{
@@ -276,6 +282,7 @@ body {
 }
 
 .btn-plus{
+  height: 100%;
   border-radius: 0px 20px 20px 0px;
 }
 

@@ -109,13 +109,16 @@ body {
   border-radius: 100%;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 #first-collection{
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .collection-contain img {
+  cursor: pointer;
   height: 100%;
   width: 100%;
   transition-duration: 1s;
@@ -124,6 +127,7 @@ body {
 }
 
 .collection-contain label {
+  cursor: pointer;
   position: absolute;
   font-size: 32px;
   font-weight: bold;

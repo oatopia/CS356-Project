@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/Home-php.css">
+    <link rel="stylesheet" href="./css/Home-php.css?v=<?php echo time(); ?>">
 </header>
 <body>
     <header>
@@ -61,12 +61,12 @@
     </section>
 
     <section class="collection-image">
-        <div id="first-collection" class="collection-contain">
+        <div id="first-collection" class="collection-contain" onclick="window.location.href='./AllOrder-shirt.php'">
             <label>เสื้อ</label>
             <img src="../image/shirt.jpg"/>
         </div>
         
-        <div class="collection-contain">
+        <div class="collection-contain" onclick="window.location.href='./AllOrder-dress.php'">
             <label>เดรส</label>
             <img src="../image/dress.jpg"/>
         </div>
@@ -80,7 +80,7 @@
             </div>
             <p>Two-Tone</p>
             <h4>฿410</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
+            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Two-Tone&amp;collection_price=410&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
         </div>
         
         <div id="center-best" class="best-seller-contain">
@@ -89,7 +89,7 @@
             </div>
             <p>Macaron</p>
             <h4>฿420</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
+            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Macaron&amp;collection_price=420&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
         </div>
         
         <div class="best-seller-contain">
@@ -97,13 +97,13 @@
                 <img src="../image/best-3.jpg"/>
             </div>
             <p>Cake</p>
-            <h4>฿420</h4>
-            <button class="btn-choose">เลือกรูปแบบ</button>
+            <h4>฿250</h4>
+            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Cake&amp;collection_price=420&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
         </div>
     </section>
 
     <section class="btn-all-item-contain">
-        <button class="btn-all-item">ดูสินค้าทั้งหมด</button>
+        <button class="btn-all-item" onclick="window.location.href='./AllOrder.php'">ดูสินค้าทั้งหมด</button>
     </section>
     
     <footer>
