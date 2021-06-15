@@ -26,18 +26,19 @@
             if($row["Username"]==$user && $row["Password"]==$pass){
                 session_start();
                 $_SESSION["Username"] = $row["Username"];
+                $_SESSION["UserID"] = $row["ID"];
                 session_write_close();
                 $conn->close();
-                echo "<script> alert('Login Success'); </script>";
+                echo "<script> alert('เข้าสู่ระบบสำเร็จ'); </script>";
                 echo "<script> location.href='../page/Home.php'; </script>";
                 
             }else{
                 $conn->close();
-                echo "<script> alert('Wrong Email or Password'); </script>";
+                echo "<script> alert('ชื่อผู้ใช้งานหรือรหัสผ่านผิด'); </script>";
                 echo "<script> window.history.back(); </script>";
             }
         }else{
-            echo "<script> alert('Not found Username'); </script>";
+            echo "<script> alert('ไม่เจอชื่อผู้ใช้งาน'); </script>";
             echo "<script> window.history.back(); </script>";
         }
 

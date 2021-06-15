@@ -17,7 +17,7 @@ mysqli_set_charset($conn, "utf8");
     $result = $conn->query($sql);
     if($result->num_rows > 0){
             $conn->close();
-            echo "<script> alert('This Username already used.'); </script>";
+            echo "<script> alert('มีชื่อผู้ใช้งานแล้ว'); </script>";
             echo "<script> window.history.back(); </script>";
             exit;
     }else{
@@ -27,6 +27,6 @@ mysqli_set_charset($conn, "utf8");
             echo "<script> alert('erorr account'); </script>";
         }
         $conn->close();
-        echo "<script> alert('Create NEW account complete!!'); location.href='../html/Login.html'; </script>";
+        echo "<script> alert('ลงทะเบียนสำเร็จ!!'); location.href='../html/Login.html'; </script>";
     }
 ?>

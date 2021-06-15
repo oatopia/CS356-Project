@@ -20,20 +20,51 @@
    $sql = "SELECT * FROM product WHERE Product_collection = '$c_name' ";
     $result = $conn->query($sql);
     $Arrayproduct = array();
+    
    while($row = $result->fetch_assoc()){
        $Arrayproduct[] = array("ID_product"=>$row["ID_product"],"Product_color"=>$row["Product_color"]
        ,"Product_price"=>$row["Product_price"],"Product_image"=>$row["Product_image"]
        ,"Product_type"=>$row["Product_type"],"Product_collection"=>$row["Product_collection"]);
    }
 
-   if(!isset($_SESSION["order"])){
-    $_SESSION["order"] = 0;
-    // $_SESSION["Product_name"][0] = $;
-    $_SESSION["Product_color"][0] = $_GET["p_color"];
-    $_SESSION["Product_size"][0] = $_GET["p_size"];
-    $_SESSION["Product_Num"][0] = $_GET["p_number"];
+   
+   //check have item in cart
+   if(isset($_POST["addtocart"])){
+    $IndexArray = array_search($_POST["p_color"], array_column($Arrayproduct,"Product_color"));
+    $image_product = $Arrayproduct[$IndexArray]["Product_image"];
+    if(!isset($_SESSION["Order"])){
+
+        $_SESSION["Order"] = 0;
+        $_SESSION["Product_name"][0] = $c_name;
+        $_SESSION["Product_image"][0] = $image_product;
+        $_SESSION["Product_type"][0] = $c_type;
+        $_SESSION["Product_price"][0] = $c_price;
+        $_SESSION["Product_color"][0] = $_POST["p_color"];
+        $_SESSION["Product_size"][0] = $_POST["p_size"];
+        $_SESSION["Product_num"][0] = $_POST["p_number"];
+    }else{
+        $keyONE = array_search($c_name, $_SESSION["Product_name"]);
+        $keyTWO = array_search($_POST["p_color"], $_SESSION["Product_color"]);
+        $keyTHREE = array_search($_POST["p_size"], $_SESSION["Product_size"]);
+        if((string)$keyONE != "" && (string)$keyTWO != "" && (string)$keyTHREE != ""){
+            if($keyONE == $keyTWO && $keyTWO == $keyTHREE && $keyONE == $keyTHREE){   
+                $_SESSION["Product_num"][$keyONE] = $_SESSION["Product_num"][$keyONE] + 1;      
+            }else{
+            }
+        }else{
+            $_SESSION["Order"] = $_SESSION["Order"] + 1;
+            $NewOrder = $_SESSION["Order"];
+            $_SESSION["Product_name"][$NewOrder] = $c_name;
+            $_SESSION["Product_image"][$NewOrder] = $image_product;
+            $_SESSION["Product_type"][$NewOrder] = $c_type;
+            $_SESSION["Product_price"][$NewOrder] = $c_price;
+            $_SESSION["Product_color"][$NewOrder] = $_POST["p_color"];
+            $_SESSION["Product_size"][$NewOrder] = $_POST["p_size"];
+            $_SESSION["Product_num"][$NewOrder] = $_POST["p_number"];
+        }
     }
-    echo $_GET["p_color"];
+   }
+     
 ?>
 
 <!DOCTYPE html>
@@ -82,22 +113,55 @@
                     </div>
                 </li>
                 <div class="line-vertical"></div>
-                <div>
-                    <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                <div class="cart-container">
                     <?php
-                        if(isset($_SESSION["order"])){
-                            for ($i=0; $i <=(int)$_SESSION["order"] ; $i++) { 
-                                
-                    ?>
-                                <div class="cart-p">
-                                    <h1><?php echo $_SESSION["Product_color"][$i];?></h1>
-                                    <h1><?php echo $_SESSION["Product_size"][$i];?></h1>
-                                </div>
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?>        
+                        <h1 class="Number-cart"><?php echo$_SESSION["Order"]+1 ?></h1>
+                    <?php        
+                        }      
+                    }
+                        ?>        
+                    <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
 
+                    <?php
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?> 
+                    <div class="cart-detail">
+                    <table class="table-cart">
+                                        <tr>
+                                            <th>รูปภาพ</th>
+                                            <th>คอลเลคชั่น</th>
+                                            <th>สี</th>
+                                            <th>ไซส์</th>
+                                            <th>จำนวน</th>
+                                            <th>ราคา</th>
+                                        </tr>
+                    <?php
+                        if(isset($_SESSION["Order"])){
+                            for ($i=0; $i <= (int)$_SESSION["Order"] ; $i++) { 
+                    ?>
+                                        <tr>
+                                            <td><img class="image-cart" src="../image/product/<?php echo $_SESSION["Product_image"][$i];?>"></td>
+                                            <td><?php echo $_SESSION["Product_name"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_color"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_size"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_num"][$i];?></td>
+                                            <td>฿<?php echo $_SESSION["Product_price"][$i];?></td>
+                                        </tr>
                     <?php
                             }
                         }
                     ?>
+                    </table>
+                        <a class="GoToBuy" href="./Cart.php">ดูรถเข็นของคุณ</a>
+                    </div>
+                    <?php        
+                        }      
+                    }
+                        ?> 
                 </div>
                 
             </div>
@@ -119,7 +183,7 @@
         </div>
         <div class="detail-goods">
             <div class="detail">
-                <form href="../service/Order.php" method='post'>
+                <form method='post' action="">
                 <h1 class="goods-collection" name="p_name"><?=$c_name;?></h1>
                 <h1 class="goods-type" name="p_type"><?=$c_type;?></h1>
                 <h1 class="goods-price" name="p_price">฿<?=$c_price;?></h1>
@@ -158,11 +222,11 @@
                 </div>
                 <div class="number-pick-container">
                     <div class="input-number">
-                        <button class="btn-minus" onclick="decrement();">-</button>
+                        <a class="btn-minus" onclick="decrement();">-</a>
                         <input id="input-number" name="p_number" class="input-text-number" type="number" value="1"/>
-                        <button class="btn-plus" onclick="increment();">+</button>
+                        <a class="btn-plus" onclick="increment();">+</a>
                     </div>
-                    <button class="btn-pickup" type="submit" >หยิบใส่ตะกร้า</button>
+                    <button class="btn-pickup" name="addtocart" type="submit" >หยิบใส่ตะกร้า</button>
                 </div>
                 </form>
             </div>
@@ -181,9 +245,7 @@
 
         function decrement(){
             var input = document.getElementById("input-number");
-            if(input.value == 1){
-
-            }else{
+            if(input.value > 1){
                 input.value = parseInt(input.value) - 1;
             }
             
