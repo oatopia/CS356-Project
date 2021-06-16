@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/Contact-php.css">
+    <link rel="stylesheet" href="./css/Contact-php.css?v=<?php echo time(); ?>">
     </header>
 
 <body>
@@ -129,11 +129,12 @@
            
         </div>
 
+        <footer>
+        <p>Copyright © N2clothing</p>
+        </footer>
     </section>
 
-    <footer>
-        <p>Copyright © N2clothing</p>
-    </footer>
+    
 </body>
 
 </html>

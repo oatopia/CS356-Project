@@ -94,6 +94,8 @@ body {
 
 .Contact-detail{
   text-align: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 .Contact-detail h1{
@@ -292,11 +294,10 @@ body {
 }
 
 
-footer {
+footer{
   position: absolute;
-  /* margin-top: 3%; */
   width: 100%;
-  /* bottom: 0px; */
+  bottom: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ffb1af;

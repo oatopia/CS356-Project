@@ -170,11 +170,11 @@
             <h2>ข้อมูลลูกค้า</h2>
             <div class="detail">
                 <p>ชื่อผู้โอน*</p>
-                <input name="t-name" type="text" require/>
+                <input name="t-name" type="text" required/>
                 <p>เลขบัญชีผู้โอน*</p>
-                <input name="t-ac" type="text" require/>
+                <input name="t-ac" type="text" required/>
                 <p>เบอร์โทร*</p>
-                <input name="t-number" type="text"require/>
+                <input name="t-number" type="text"required/>
             </div>
         </div>
 
@@ -182,9 +182,9 @@
             <h2>ข้อมูลการชำระเงิน</h2>
             <div class="payment">
                 <p>เลขที่สั่งซื้อ#</p>
-                <input name="id-order" type="text" placeholder="xxx" require/>
+                <input name="id-order" type="text" placeholder="xxx" required/>
                 <p>จำนวนเงิน</p>
-                <input name="totalprice" type="text" placeholder="0.00" require/>
+                <input name="totalprice" type="text" placeholder="0.00" required/>
             </div>
         </div>
 
