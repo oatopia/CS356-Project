@@ -226,7 +226,7 @@
                         <input id="input-number" name="p_number" class="input-text-number" type="number" value="1"/>
                         <a class="btn-plus" onclick="increment();">+</a>
                     </div>
-                    <button class="btn-pickup" name="addtocart" type="submit" >หยิบใส่ตะกร้า</button>
+                    <button class="btn-pickup" name="addtocart" type="submit" >เพิ่มไปยังรถเข็น</button>
                 </div>
                 </form>
             </div>

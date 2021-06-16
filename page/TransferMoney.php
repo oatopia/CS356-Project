@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TransferMoney</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/TransferMoney-php.css">
+    <link rel="stylesheet" href="./css/TransferMoney-php.css?v=<?php echo time(); ?>">
     </header>
 
 <body>
@@ -53,13 +53,62 @@
                     </div>
                 </li>
                 <div class="line-vertical"></div>
-                <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                <div class="cart-container">
+                    <?php
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?>        
+                        <h1 class="Number-cart"><?php echo$_SESSION["Order"]+1 ?></h1>
+                    <?php        
+                        }      
+                    }
+                        ?>
+                    <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                    <?php
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?> 
+                    <div class="cart-detail">
+                    <table class="table-cart">
+                                        <tr>
+                                            <th>รูปภาพ</th>
+                                            <th>คอลเลคชั่น</th>
+                                            <th>สี</th>
+                                            <th>ไซส์</th>
+                                            <th>จำนวน</th>
+                                            <th>ราคา</th>
+                                        </tr>
+                    <?php
+                        if(isset($_SESSION["Order"])){
+                            for ($i=0; $i <= (int)$_SESSION["Order"] ; $i++) { 
+                    ?>
+                                        <tr>
+                                            <td><img class="image-cart" src="../image/product/<?php echo $_SESSION["Product_image"][$i];?>"></td>
+                                            <td><?php echo $_SESSION["Product_name"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_color"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_size"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_num"][$i];?></td>
+                                            <td>฿<?php echo $_SESSION["Product_price"][$i];?></td>
+                                        </tr>
+                    <?php
+                            }
+                        }
+                    ?>
+                    </table>
+                        <a class="GoToBuy" href="./Cart.php">ดูรถเข็นของคุณ</a>
+                    </div>
+                    <?php        
+                        }      
+                    }
+                        ?> 
+                </div>
             </div>
 
         </div>
     </header>
 
     <section class="TransferMoney-content">
+        <form method="post" action="../service/Transfer.php">
         <h1>แจ้งโอนเงิน</h1>
         <div class="chooseAccount-content">
             <h2>เลือกบัญชีที่โอนเข้า</h2>
@@ -81,7 +130,7 @@
                     </tr>
                     <tr class="SCB-Account">
                         <td>
-                            <input type="radio"/>
+                            <input type="radio" name="bank" value="SCB" style="height:15px; width:15px;"/>
                             <img src="../image/scb.png">
                         </td>
                         <td>
@@ -96,7 +145,7 @@
                     </tr>
                     <tr class="BBL-Account">
                         <td>
-                            <input type="radio"/>
+                            <input type="radio" name="bank" value="BBL" style="height:15px; width:15px;"/>
                             <img src="../image/BBl.png">
                         </td>
                         <td>
@@ -121,9 +170,11 @@
             <h2>ข้อมูลลูกค้า</h2>
             <div class="detail">
                 <p>ชื่อผู้โอน*</p>
-                <input type="text"/>
+                <input name="t-name" type="text" require/>
+                <p>เลขบัญชีผู้โอน*</p>
+                <input name="t-ac" type="text" require/>
                 <p>เบอร์โทร*</p>
-                <input type="text"/>
+                <input name="t-number" type="text"require/>
             </div>
         </div>
 
@@ -131,18 +182,16 @@
             <h2>ข้อมูลการชำระเงิน</h2>
             <div class="payment">
                 <p>เลขที่สั่งซื้อ#</p>
-                <input type="text" placeholder="xxx"/>
+                <input name="id-order" type="text" placeholder="xxx" require/>
                 <p>จำนวนเงิน</p>
-                <input type="text" placeholder="0.00"/>
-                <p>อัปโหลดสลิป</p>
-                <input type="file"/>
+                <input name="totalprice" type="text" placeholder="0.00" require/>
             </div>
         </div>
 
         <div class="block-btn-payment">
-            <button class="btn-save-payment">แจ้งการชำระเงิน</button>
+            <button class="btn-save-payment" type="submit">แจ้งการชำระเงิน</button>
         </div>
-        
+        </form>
     </section>
 
 

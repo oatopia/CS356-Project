@@ -53,7 +53,55 @@
                     </div>
                 </li>
                 <div class="line-vertical"></div>
-                <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                <div class="cart-container">
+                    <?php
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?>        
+                        <h1 class="Number-cart"><?php echo$_SESSION["Order"]+1 ?></h1>
+                    <?php        
+                        }      
+                    }
+                        ?>
+                    <img class="cart-icon" src="../image/icon/shopping-cart 1.png" />
+                    <?php
+                    if(isset($_SESSION["Order"])){
+                        if($_SESSION["Order"] > -1){
+                    ?> 
+                    <div class="cart-detail">
+                    <table class="table-cart">
+                                        <tr>
+                                            <th>รูปภาพ</th>
+                                            <th>คอลเลคชั่น</th>
+                                            <th>สี</th>
+                                            <th>ไซส์</th>
+                                            <th>จำนวน</th>
+                                            <th>ราคา</th>
+                                        </tr>
+                    <?php
+                        if(isset($_SESSION["Order"])){
+                            for ($i=0; $i <= (int)$_SESSION["Order"] ; $i++) { 
+                    ?>
+                                        <tr>
+                                            <td><img class="image-cart" src="../image/product/<?php echo $_SESSION["Product_image"][$i];?>"></td>
+                                            <td><?php echo $_SESSION["Product_name"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_color"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_size"][$i];?></td>
+                                            <td><?php echo $_SESSION["Product_num"][$i];?></td>
+                                            <td>฿<?php echo $_SESSION["Product_price"][$i];?></td>
+                                        </tr>
+                    <?php
+                            }
+                        }
+                    ?>
+                    </table>
+                        <a class="GoToBuy" href="./Cart.php">ดูรถเข็นของคุณ</a>
+                    </div>
+                    <?php        
+                        }      
+                    }
+                        ?> 
+                </div>
             </div>
 
         </div>

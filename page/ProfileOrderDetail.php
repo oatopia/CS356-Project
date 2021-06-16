@@ -4,51 +4,73 @@
         echo "NOT LOGIN";
         header("Location: http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
     }
+    $ID_order = $_GET['ID_order'];
+
     $user = $_SESSION['Username'];
+      // Create connection
+      $conn = new mysqli("localhost", "root", "5643789thanapat" ,"n2clothing");
+      // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM ordering_product WHERE ID_order = '$ID_order'";
+    $result = $conn->query($sql);
+    $Array = array();
+   while($row = $result->fetch_assoc()){
+       $Array[] = array("ID_op"=>$row['ID_op'],"ID_order"=>$row['ID_order'],"OrderProduct_image"=>$row['OrderProduct_image']
+       ,"OrderProduct_name"=>$row['OrderProduct_name'],"OrderProduct_type"=>$row['OrderProduct_type']
+       ,"OrderProduct_color"=>$row['OrderProduct_color'],"OrderProduct_size"=>$row['OrderProduct_size']
+       ,"OrderProduct_num"=>$row['OrderProduct_num'],"OrderProduct_price"=>$row['OrderProduct_price']);
+   }
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>ProfileOrderDetail</title>
     <link rel="icon" href="../image/LogoN2clothing.jpg" type="image/icon type">
-    <link rel="stylesheet" href="./css/Home-php.css?v=<?php echo time(); ?>">
-</header>
+    <link rel="stylesheet" href="./css/ProfileOrderDetail-php.css?v=<?php echo time(); ?>">
+    </header>
+
 <body>
     <header>
         <div class="Navbar-homepage">
             <div class="Navbar-contain-icon-menu">
-                <img class="LogoN2clothing" src="../image/LogoN2clothing.png"/>
-                <ul class="manu-navbar">
+                <img class="LogoN2clothing" src="../image/LogoN2clothing.png" />
+                <ul class="menu-navbar">
                     <li><a href="./Home.php" id="home-link">หน้าแรก</a></li>
-                    <li><a href="./AllOrder.php">สินค้า</a></li>
-                    <li class="HowToOrder-link"><a >การสั่งซื้อสินค้า</a>
+                    <li><a href="./AllOrder.php" id="allorder-link">สินค้า</a></li>
+                    <li class="HowToOrder-link"><a id="order-link">การสั่งซื้อสินค้า</a>
                         <div class="sub-menu-navbar">
                             <ul>
-                                <li><a href="./HowToOrder.php">วิธีการสั่งซื้อสินค้า</a></li>
-                                <li><a href="./TransferMoney.php">แจ้งโอนเงิน</a></li>
+                                <li><a id="howtoOrder-link" href="./HowToOrder.phpl">วิธีการสั่งซื้อสินค้า</a></li>
+                                <li><a id="transferMoney-link" href="./TransferMoney.php">แจ้งโอนเงิน</a></li>
                             </ul>
-                        </div> 
+                        </div>
+                            
                     </li>
                     <li><a href="./Contact.php">ติดต่อเรา</a></li>
                 </ul>
             </div>
-            
+
             <div class="menu-login-cart">
             <li class="Username-link">
                 <p class="username-p" ><?= $user; ?></p>
                 <div class="sub-menu-navbar-profile">
                             <ul>
-                                <li><a href="./ProfileOrder.php">คำสั่งซื้อ</a></li>
-                                <li><a href="./ProfileAddress.php">ที่อยู่</a></li>
+                                <li class="order-link"><a href="./ProfileOrder.php">คำสั่งซื้อ</a></li>
+                                <li ><a href="./ProfileAddress.php" >ที่อยู่</a></li>
                                 <li><a href="../service/Logout.php">ออกจากระบบ</a></li>
                             </ul>
                     </div>
-                </li>    
+                </li>
                 <div class="line-vertical"></div>
                 <div class="cart-container">
                     <?php
@@ -99,63 +121,65 @@
                     }
                         ?> 
                 </div>
+                
             </div>
-            
+
         </div>
     </header>
 
-    <section class="slide-image">
-            <img class="image-slide" src="../image/showimage.jpg" style="width: 100%;"/>
-    </section>
+    <section class="Cart-container">
+        <div class="header-Order">
+            <h1>คำสั่งซื้อของลูกค้า</h1>
+        </div>
+        <div class="Cart-inner-container">
+        <table class="Cart-table">
+            <tr>
+                <th>สินค้า</th>
+                <th>คอลเลคชั่น</th>
+                <th>ประเภท</th>
+                <th>สี</th>
+                <th>ไซส์</th>
+                <th>จำนวน</th>
+                <th>ราคาต่อชิ้น</th>
+            </tr>
+            <?php
+                $Total = 0;
+                
+            
+            foreach($Array as $Array){
+                $qty = $Array["OrderProduct_num"];
+                $Eachprice = $Array["OrderProduct_price"];
+                $price = $qty * $Eachprice;
+                $Total = $Total + $price;
+            ?>
+            <tr>
+                <td class="TD-image"><img class="Image-cart-table" src="../image/product/<?php echo $Array["OrderProduct_image"];?>"></td>
+                <td><?php echo $Array["OrderProduct_name"];?></td>
+                <td><?php echo $Array["OrderProduct_type"];?></td>
+                <td><?php echo $Array["OrderProduct_color"];?></td>
+                <td><?php echo $Array["OrderProduct_size"];?></td>
+                <td><?php echo $Array["OrderProduct_num"];?></td>
+                <td id="TD-price">฿<?php echo $Array["OrderProduct_price"];?></td>
+                </tr>
+                    <?php
+                            }
+                        
+                    ?>
 
-    <section class="collection-image">
-        <div id="first-collection" class="collection-contain" onclick="window.location.href='./AllOrder-shirt.php'">
-            <label>เสื้อ</label>
-            <img src="../image/shirt.jpg"/>
+        </table>
+        <div class="Total-price">
+            <a class="btn-return" href="./ProfileOrder.php">ย้อนกลับ</a>
+            <h1>รวมราคาทั้งหมด<span>฿<?php echo $Total;?></span> </h1>
         </div>
         
-        <div class="collection-contain" onclick="window.location.href='./AllOrder-dress.php'">
-            <label>เดรส</label>
-            <img src="../image/dress.jpg"/>
         </div>
-    </section>
-
-    <section class="Best-seller">
-        <h1>สินค้าขายดี</h1>
-        <div class="best-seller-contain">
-            <div class="best-seller-contain-inner">
-                <img src="../image/best-1.jpg"/>
-            </div>
-            <p>Two-Tone</p>
-            <h4>฿410</h4>
-            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Two-Tone&amp;collection_price=410&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
-        </div>
-        
-        <div id="center-best" class="best-seller-contain">
-            <div  class="best-seller-contain-inner">
-                <img src="../image/best-2.jpg"/>
-            </div>
-            <p>Macaron</p>
-            <h4>฿420</h4>
-            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Macaron&amp;collection_price=420&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
-        </div>
-        
-        <div class="best-seller-contain">
-            <div class="best-seller-contain-inner">
-                <img src="../image/best-3.jpg"/>
-            </div>
-            <p>Cake</p>
-            <h4>฿250</h4>
-            <?php echo'<button class="btn-choose" onclick=\'window.location.href="./DetailOrder.php?collection_name=Cake&amp;collection_price=420&amp;collection_type=Dress&amp;"\'>เลือกรูปแบบ</button>' ?>
-        </div>
-    </section>
-
-    <section class="btn-all-item-contain">
-        <button class="btn-all-item" onclick="window.location.href='./AllOrder.php'">ดูสินค้าทั้งหมด</button>
-    </section>
-    
-    <footer>
+        <footer>
         <p>Copyright © N2clothing</p>
-    </footer>
+        </footer>
+    </section>
+
+    
+    
 </body>
+
 </html>

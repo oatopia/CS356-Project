@@ -6,8 +6,9 @@
 body {
   margin: 0px;
   min-height: 100vh;
-  background-color: #fed6d7;
+  background-color: hsl(359, 95%, 92%);
   padding-bottom: 0px;
+  /* position: relative; */
 }
 
 .LogoN2clothing {
@@ -54,13 +55,6 @@ body {
   transition-duration: 0.3s;
 }
 
-#allorder-link {
-  color: #055a6d;
-}
-
-#transferMoney-link {
-  color: #055a6d;
-}
 
 .login-link {
   text-decoration: none;
@@ -92,6 +86,8 @@ body {
 .cart-icon {
   height: 36px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -101,12 +97,14 @@ body {
 
 
 .HowToOrder-link:hover .sub-menu-navbar{
+  z-index: 2;
   display: block;
   position: absolute;
   width: fit-content;
   background-color: #fbf3f3;
   padding: 10px 10px 10px 0px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
 
@@ -116,63 +114,6 @@ body {
   font-weight: normal;
 }
 
-.left-content{
-  float: left;
-  width: 20%;
-  height: 100vh;
-}
-
-.left-content h1{
-  margin-left: 10%;
-  font-size: 28px;
-  color: #0883a0;
-}
-
-.left-content li{
-  padding: 10px 0px 10px 0px;
-  border-bottom: 1px solid #0883a0;
-  text-align: start;
-  list-style: none;
-  font-size: 24px;
-  color: #0883a0;
-  cursor: pointer;
-}
-
-.left-content a{
-  cursor: pointer;
-  text-decoration: none;
-  color: #0883a0;
-}
-
-.left-content li:hover{
-  color: #055a6d;
-  font-weight: bold;
-}
-.right-content{
-  float: left;
-  width: 80%;
-}
-
-.all-goods{
-  display: grid;
-  grid-template-columns: repeat(auto-fill,300px);
-  gap: 10px;
-  row-gap: 30px;
-  justify-items: center;
-  padding: 30px 0px 10px 30px;
-}
-
-.goods{
-  width: 100%;
-  height: 300px;
-  background-color: violet;
-}
-
-
-#link-dress{
-    color: #055a6d;
-    font-weight: 500;
-  }
 
 
 .username-p {
@@ -229,6 +170,7 @@ body {
     background-color: #fbf3f3;
     border-radius: 10px;
     z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
 .Username-link , .Username-link li{
@@ -236,58 +178,6 @@ body {
     text-decoration: none;
     
 
-}  
-
-.product-collection{
-  text-align: center;
-  padding: 0px 20px 20px 20px;
-  z-index: 1;
-}
-
-.product-collection h1{
-  font-size: 20px;
-  font-weight: normal;
-  color: #5c8e95;
-  margin: 0px;
-}
-
-.btn-choose{
-  margin-top: 0px;
-  border-radius: 20px;
-  color: white;
-  background-color: #1c98bc;
-  border: none;
-  font-size: 18px;
-  padding: 10px 20px 10px 20px ;
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.btn-choose:hover{
-  background-color: #177a98;
-  transition-duration: 0.5s;
-}
-
-.image-collection-container {
-  overflow: hidden;
-  height: 270px;
-  width: 250px;
-  border-radius: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-.image-collection{
-  height: 100%;
-  width: 100%;
-  transition-duration: 1s;
-  opacity: 1;
-}
-
-.image-collection-container:hover img{
-  transform: scale(1.1);
-  transition-duration: 1s;
-  opacity: 0.7;
 }
 
 
@@ -362,10 +252,153 @@ body {
   
 }
 
+
+.Cart-container{
+    /* padding: 20px; */
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.Image-cart-table{
+    height:200px;
+    border-radius: 10%;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.TD-image{
+    width: 20%;
+    padding: 0px;
+    
+}
+
+.Cart-table{
+    z-index: 1;
+    width: 100%;
+}
+
+.Cart-table,.Cart-table th,.Cart-table td{
+    border-bottom: 1px solid #747474;
+    border-collapse: collapse;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+}
+
+.Cart-table th{
+    color: #055a6d;
+   white-space: nowrap;
+    font-size: 24px;
+    /* padding: 0px 20px 20px 50px; */
+}
+
+
+.Cart-table td{
+    font-size: 20px;
+    text-align: center;
+    /* padding: 5px; */
+    color: #0883a0;
+}
+
+#TD-price{
+    font-size: 20px;
+    color: #055a6d;
+    font-weight: bold;
+}
+
+
+.delete-order{
+    background-color: rgb(255, 78, 78);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.delete-order:hover{
+    background-color: rgb(234, 29, 29);
+}
+
+.Total-price{
+    text-align: end;
+}
+
+.Total-price h1{
+    color: #0883a0;
+    font-size: 20px;
+}
+
+.Total-price span{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 26px;
+    color: rgb(219, 50, 50);
+    /* color: #055a6d; */
+}
+
+.btn-order{
+    text-align: center;
+}
+
+.btn-order button{
+    padding: 10px 30px 10px 30px;
+    color: white;
+    font-size: 28px;
+    border: none;
+    background-color: #0883a0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn-order button:hover{
+    background-color:#055a6d;
+  }
+
+.Cart-inner-container{
+    padding: 20px 20px 100px 20px;
+}
+
+.header-Order{
+    background-color: #6ea8b0;
+    padding: 5px 0px 5px 0px;
+}
+.header-Order h1{
+    font-size: 32px;
+    color: white;
+    margin-left: 10%;
+}
+
+.btn-return{
+    text-decoration: none;
+    float: left;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    background-color: #0883a0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.btn-return:hover{
+    background-color:#055a6d;
+}
+
 footer {
-  clear: both;
-  margin-top: 3%;
+  /* margin-top: 20px; */
+  position: absolute;
   width: 100%;
+  bottom: 0px;
+  vertical-align: text-bottom;  
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ffb1af;
