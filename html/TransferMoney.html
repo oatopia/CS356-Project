@@ -18,7 +18,7 @@
                 <img class="LogoN2clothing" src="../image/LogoN2clothing.png" />
                 <ul class="menu-navbar">
                     <li><a href="../html/Home.html" id="home-link">หน้าแรก</a></li>
-                    <li><a href="../html/AllOrder.html">สินค้า</a></li>
+                    <li><a href="../service/AlertLogin.php">สินค้า</a></li>
                     <li class="HowToOrder-link"><a id="order-link">การสั่งซื้อสินค้า</a>
                         <div class="sub-menu-navbar">
                             <ul>
@@ -104,6 +104,8 @@
             <div class="detail">
                 <p>ชื่อผู้โอน*</p>
                 <input type="text"/>
+                <p>เลขบัญชีผู้โอน*</p>
+                <input type="text"/>
                 <p>เบอร์โทร*</p>
                 <input type="text"/>
             </div>
@@ -116,13 +118,11 @@
                 <input type="text" placeholder="xxx"/>
                 <p>จำนวนเงิน</p>
                 <input type="text" placeholder="0.00"/>
-                <p>อัปโหลดสลิป</p>
-                <input type="file"/>
             </div>
         </div>
 
         <div class="block-btn-payment">
-            <button class="btn-save-payment">แจ้งการชำระเงิน</button>
+            <button class="btn-save-payment" onclick="window.location.href = '../service/AlertLogin.php'">แจ้งการชำระเงิน</button>
         </div>
         
     </section>
