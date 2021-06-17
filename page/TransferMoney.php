@@ -32,7 +32,7 @@
                         <div class="sub-menu-navbar">
                             <ul>
                                 <li><a id="howtoOrder-link" href="./HowToOrder.php">วิธีการสั่งซื้อสินค้า</a></li>
-                                <li><a id="transferMoney-link" href="./TransferMoney.php">แจ้งโอนเงิน</a></li>
+                                <li><a id="transferMoney-link" href="./TransferMoney.php">แจ้งชำระเงิน</a></li>
                             </ul>
                         </div>
                             
@@ -109,7 +109,7 @@
 
     <section class="TransferMoney-content">
         <form method="post" action="../service/Transfer.php">
-        <h1>แจ้งโอนเงิน</h1>
+        <h1>แจ้งชำระเงิน</h1>
         <div class="chooseAccount-content">
             <h2>เลือกบัญชีที่โอนเข้า</h2>
             <table class="table-Account">
@@ -189,7 +189,7 @@
         </div>
 
         <div class="block-btn-payment">
-            <button class="btn-save-payment" type="submit">แจ้งการชำระเงิน</button>
+            <button class="btn-save-payment" type="submit">แจ้งชำระเงิน</button>
         </div>
         </form>
     </section>

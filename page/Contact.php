@@ -32,7 +32,7 @@
                         <div class="sub-menu-navbar">
                             <ul>
                                 <li><a href="./HowToOrder.php">วิธีการสั่งซื้อสินค้า</a></li>
-                                <li><a href="./TransferMoney.php">แจ้งโอนเงิน</a></li>
+                                <li><a href="./TransferMoney.php">แจ้งชำระเงิน</a></li>
                             </ul>
                         </div>
                             

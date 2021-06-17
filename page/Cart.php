@@ -33,7 +33,7 @@
                         <div class="sub-menu-navbar">
                             <ul>
                                 <li><a id="howtoOrder-link" href="./HowToOrder.phpl">วิธีการสั่งซื้อสินค้า</a></li>
-                                <li><a id="transferMoney-link" href="./TransferMoney.php">แจ้งโอนเงิน</a></li>
+                                <li><a id="transferMoney-link" href="./TransferMoney.php">แจ้งชำระเงิน</a></li>
                             </ul>
                         </div>
                             

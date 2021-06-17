@@ -21,7 +21,7 @@ $conpass = $_POST['confirmpassword'];
             session_write_close();
             $conn->close();
             echo "<script> alert('บันทึกรหัสผ่านใหม่สำเร็จ'); </script>";
-            echo "<script> location.href='../html/Login.html'; </script>";
+            echo "<script> location.href='../page/LoginPage.php'; </script>";
         }
     }else{
         $conn->close();
