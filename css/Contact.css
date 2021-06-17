@@ -93,7 +93,10 @@ body {
 
 
 .Contact-detail{
+  z-index: 1;
   text-align: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 .Contact-detail h1{
@@ -138,6 +141,7 @@ body {
 
 
 .HowToOrder-link:hover .sub-menu-navbar{
+  z-index: 2;
   display: block;
   position: absolute;
   width: fit-content;
@@ -157,9 +161,8 @@ body {
 
 footer {
   position: absolute;
-  /* margin-top: 3%; */
   width: 100%;
-  /* bottom: 0px; */
+  bottom: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ffb1af;

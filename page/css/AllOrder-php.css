@@ -79,7 +79,7 @@ body {
 .line-vertical {
   height: 40px;
   width: 2px;
-  background-color:#7c848c;
+  background-color: #7c848c;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -94,41 +94,38 @@ body {
   cursor: pointer;
 }
 
-
-.sub-menu-navbar{
+.sub-menu-navbar {
   display: none;
 }
 
-
-.HowToOrder-link:hover .sub-menu-navbar{
+.HowToOrder-link:hover .sub-menu-navbar {
   display: block;
   position: absolute;
   width: fit-content;
   background-color: #fbf3f3;
   padding: 10px 10px 10px 0px;
   border-radius: 10px;
-  
 }
 
-.sub-menu-navbar a{
+.sub-menu-navbar a {
   margin-left: -30px;
   font-size: 18px;
   font-weight: normal;
 }
 
-.left-content{
+.left-content {
   float: left;
   width: 20%;
   height: 100vh;
 }
 
-.left-content h1{
+.left-content h1 {
   margin-left: 10%;
   font-size: 28px;
   color: #0883a0;
 }
 
-.left-content li{
+.left-content li {
   padding: 10px 0px 10px 0px;
   border-bottom: 1px solid #0883a0;
   text-align: start;
@@ -138,128 +135,122 @@ body {
   cursor: pointer;
 }
 
-.left-content a{
+.left-content a {
   cursor: pointer;
   text-decoration: none;
   color: #0883a0;
 }
 
-.left-content li:hover{
+.left-content li:hover {
   color: #055a6d;
   font-weight: bold;
 }
-.right-content{
+.right-content {
   float: left;
   width: 80%;
 }
 
-.all-goods{
+.all-goods {
   display: grid;
-  grid-template-columns: repeat(auto-fill,300px);
+  grid-template-columns: repeat(auto-fill, 300px);
   gap: 10px;
   row-gap: 30px;
   justify-items: center;
   padding: 30px 0px 10px 30px;
 }
 
-.goods{
+.goods {
   width: 100%;
   height: 300px;
   background-color: violet;
 }
 
-
-
 .username-p {
-    position: relative;
-    text-decoration: none;
-    white-space: nowrap;
-    font-weight: 500;
-    font-size: 24px;
-    color: #0883a0;
-    cursor: pointer;
-  }
-  
-  .username-p:hover {
-    color: #055a6d;
-    transition-duration: 0.3s;
-  }
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0883a0;
+  cursor: pointer;
+}
 
+.username-p:hover {
+  color: #055a6d;
+  transition-duration: 0.3s;
+}
 
+.sub-menu-navbar-profile {
+  display: none;
+}
 
-.sub-menu-navbar-profile{
-    display: none;
-  }
+.sub-menu-navbar-profile ul {
+  margin: 0px;
+  padding: 0px;
+}
 
-  .sub-menu-navbar-profile ul{
-      margin: 0px;
-      padding: 0px;
-  }
+.sub-menu-navbar-profile a {
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #1c98bc;
+}
 
-.sub-menu-navbar-profile a{
-    font-size: 18px;
-    font-weight: normal;
-    text-decoration: none;
-    color: #1c98bc;
-  }
+.sub-menu-navbar-profile li:hover {
+  color: #177a98;
+  background-color: #c7e2e7;
+  width: 100%;
+}
 
-.sub-menu-navbar-profile li:hover{
-    color: #177a98;
-    background-color: #c7e2e7;
-    width: 100%;
-  }
+.sub-menu-navbar-profile li {
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
 
-  .sub-menu-navbar-profile li{
-      padding: 10px 20px 10px 20px;
-  }
+.Username-link:hover .sub-menu-navbar-profile {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  overflow: hidden;
+  background-color: #fbf3f3;
+  border-radius: 10px;
+  z-index: 2;
+  overflow: hidden;
+}
 
+.Username-link,
+.Username-link li {
+  list-style: none;
+  text-decoration: none;
+}
 
-
-.Username-link:hover .sub-menu-navbar-profile{
-    display: block;
-    position: absolute;
-    top: 70px;
-    right: 70px;
-    overflow: hidden;
-    background-color: #fbf3f3;
-    border-radius: 10px;
-    z-index: 2;
-    overflow: hidden;
-  }
-
-.Username-link , .Username-link li{
-    list-style: none;
-    text-decoration: none;
-    
-
-}  
-
-.product-collection{
+.product-collection {
   z-index: 1;
   text-align: center;
   padding: 0px 20px 20px 20px;
 }
 
-.product-collection h1{
+.product-collection h1 {
   font-size: 20px;
   font-weight: normal;
   color: #5c8e95;
   margin: 0px;
 }
 
-.btn-choose{
+.btn-choose {
   margin-top: 0px;
   border-radius: 20px;
   color: white;
   background-color: #1c98bc;
   border: none;
   font-size: 18px;
-  padding: 10px 20px 10px 20px ;
+  padding: 10px 20px 10px 20px;
   transition-duration: 0.5s;
   cursor: pointer;
 }
 
-.btn-choose:hover{
+.btn-choose:hover {
   background-color: #177a98;
   transition-duration: 0.5s;
 }
@@ -273,21 +264,20 @@ body {
   position: relative;
 }
 
-.image-collection{
+.image-collection {
   height: 100%;
   width: 100%;
   transition-duration: 1s;
   opacity: 1;
 }
 
-.image-collection-container:hover img{
+.image-collection-container:hover img {
   transform: scale(1.1);
   transition-duration: 1s;
   opacity: 0.7;
 }
 
-
-.Number-cart{
+.Number-cart {
   z-index: 2;
   top: 4px;
   right: 10px;
@@ -298,30 +288,29 @@ body {
   border-radius: 50%;
   padding: 0px 9px 0px 9px;
   box-shadow: 0px 4px 8px 0px rgba(137, 134, 134, 0.2);
-
 }
-.image-cart{
+.image-cart {
   width: 50px;
   border-radius: 10px;
 }
-.cart-detail{
+.cart-detail {
   display: none;
 }
-.cart-detail p{
+.cart-detail p {
   display: inline;
 }
-.cart-container:hover .cart-detail{
-    z-index: 2;
-    text-align: center;
-    width: 34%;
-    display: block;
-    position: absolute;
-    right: 0px;
-    overflow: hidden;
-    background-color: #f3ecec;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5px 10px 20px 10px;
+.cart-container:hover .cart-detail {
+  z-index: 2;
+  text-align: center;
+  width: 34%;
+  display: block;
+  position: absolute;
+  right: 0px;
+  overflow: hidden;
+  background-color: #f3ecec;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 10px 20px 10px;
 }
 .table-cart {
   display: inline-block;
@@ -329,17 +318,18 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.table-cart th,.table-cart td{
+.table-cart th,
+.table-cart td {
   padding: 5px 5px 5px 5px;
 }
-.table-cart th{
+.table-cart th {
   color: #055a6d;
   white-space: nowrap;
 }
-.table-cart td{
+.table-cart td {
   color: #0883a0;
 }
-.GoToBuy{
+.GoToBuy {
   white-space: nowrap;
   text-decoration: none;
   padding: 5px 30px 5px 30px;
@@ -351,11 +341,9 @@ body {
   transition-duration: 0.5s;
   cursor: pointer;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-
 }
-.GoToBuy:hover{
-  background-color:#055a6d;
-  
+.GoToBuy:hover {
+  background-color: #055a6d;
 }
 
 footer {
@@ -368,5 +356,3 @@ footer {
   text-align: center;
   color: white;
 }
-
-

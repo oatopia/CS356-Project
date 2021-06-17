@@ -29,25 +29,34 @@
             session_write_close();
             $conn->close();
             echo "<script> alert('แจ้งโอนเงินแล้ว'); </script>";
-            echo "<script> location.href='../page/TransferMoney.php'; </script>";
+            echo "<script> window.history.back(); </script>";
     }else{
-        $sql = "SELECT * FROM ordering WHERE ID_order='$ID_order' ";
+        $sql = "SELECT * FROM ordering WHERE ID_order='$ID_order' AND ID_user='$userID'";
         $result2 = $conn->query($sql);
         if($result2->num_rows > 0){
-            $sql = "INSERT INTO transfer (ID_user,Bank_name,Account_name,Account_number,Transferor_name,Transferor_Anumber,Transferor_number,ID_order,TotalPrice) 
-            VALUES('$userID', '$bank', '$accountname ', '$accountnumber', '$tname', '$tac', '$tnumber', '$ID_order', '$Totalprice')";
-            if ($conn->query($sql) === TRUE) {
+            $row = $result2->fetch_assoc();
+            if($Totalprice == $row["TotalPrice"]){
+                $sql = "INSERT INTO transfer (ID_user,Bank_name,Account_name,Account_number,Transferor_name,Transferor_Anumber,Transferor_number,ID_order,TotalPrice) 
+                VALUES('$userID', '$bank', '$accountname ', '$accountnumber', '$tname', '$tac', '$tnumber', '$ID_order', '$Totalprice')";
+                if ($conn->query($sql) === TRUE) {
+                    session_write_close();
+                    $conn->close();
+                    echo "<script> alert('บันทึกการแจ้งโอนเงินสำเร็จ'); </script>";
+                    echo "<script> location.href='../page/Home.php'; </script>";
+                }
+            }else{
                 session_write_close();
                 $conn->close();
-                echo "<script> alert('บันทึกการแจ้งโอนเงินสำเร็จ'); </script>";
-                echo "<script> location.href='../page/Home.php'; </script>";
+                echo "<script> alert('จำนวนเงินไม่ถูกต้อง'); </script>";
+                echo "<script> window.history.back(); </script>";
             }
+            
             
         }else{
             session_write_close();
             $conn->close();
             echo "<script> alert('ไม่มีเลขที่สั่งซื้อ'); </script>";
-            echo "<script> location.href='../page/TransferMoney.php'; </script>";
+            echo "<script> window.history.back(); </script>";
         }
 
     }  

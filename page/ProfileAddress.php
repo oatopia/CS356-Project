@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['Username'])){
         echo "NOT LOGIN";
-        header("Location: http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
+        header("Location: ../page/LoginPage.php");
     }
     $user = $_SESSION['Username'];
     $conn = new mysqli("localhost", "root", "5643789thanapat" ,"n2clothing");

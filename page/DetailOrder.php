@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['Username'])){
         echo "NOT LOGIN";
-        header("Location: http://localhost/CS356-Finalpj/CS356-Project/html/Login.html");
+        header("Location: ../page/LoginPage.php");
     }
 
 
@@ -48,7 +48,7 @@
         $keyTHREE = array_search($_POST["p_size"], $_SESSION["Product_size"]);
         if((string)$keyONE != "" && (string)$keyTWO != "" && (string)$keyTHREE != ""){
             if($keyONE == $keyTWO && $keyTWO == $keyTHREE && $keyONE == $keyTHREE){   
-                $_SESSION["Product_num"][$keyONE] = $_SESSION["Product_num"][$keyONE] + 1;      
+                $_SESSION["Product_num"][$keyONE] = $_SESSION["Product_num"][$keyONE] + $_POST["p_number"];      
             }else{
             }
         }else{

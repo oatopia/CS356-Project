@@ -262,6 +262,7 @@ body {
 
   .sub-menu-navbar-profile li{
       padding: 10px 20px 10px 20px;
+      cursor: pointer;
   }
 
 

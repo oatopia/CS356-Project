@@ -93,6 +93,7 @@ body {
 
 
 .Contact-detail{
+  z-index: 1;
   text-align: center;
   position: relative;
   min-height: 100vh;
@@ -200,11 +201,13 @@ body {
 
   .sub-menu-navbar-profile li{
       padding: 10px 20px 10px 20px;
+      cursor: pointer;
   }
 
 
 
 .Username-link:hover .sub-menu-navbar-profile{
+    z-index: 2;
     display: block;
     position: absolute;
     top: 70px;
